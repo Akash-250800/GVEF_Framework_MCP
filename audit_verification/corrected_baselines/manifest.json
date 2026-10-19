@@ -1,0 +1,62 @@
+{
+  "start_utc": "2026-10-09T10:25:39.793609+00:00",
+  "mode": "ollama",
+  "model": "qwen2.5:1.5b",
+  "benchmark": "inventory",
+  "benchmark_question_file": "",
+  "benchmark_answer_file": "",
+  "dataset_rejected_entries": [],
+  "task_count": 20,
+  "task_ids": [
+    "inventory_pen",
+    "inventory_notebook",
+    "inventory_usb",
+    "inventory_mouse",
+    "inventory_cable",
+    "inventory_keyboard",
+    "inventory_monitor",
+    "inventory_lamp",
+    "inventory_stapler",
+    "inventory_folder",
+    "inventory_charger",
+    "inventory_webcam",
+    "inventory_headset",
+    "inventory_router",
+    "inventory_tablet",
+    "inventory_paper",
+    "inventory_battery",
+    "inventory_adapter",
+    "inventory_mic",
+    "inventory_speaker"
+  ],
+  "suite": "baselines",
+  "faults": [
+    "none",
+    "malformed_json",
+    "type_mismatch",
+    "stale_schema",
+    "transient_api",
+    "transient_timeout",
+    "transient_rate_limit",
+    "wrong_tool"
+  ],
+  "feedback_formats": [
+    "raw_trace",
+    "schema_diff",
+    "natural_language"
+  ],
+  "retry_budgets": [
+    2,
+    0,
+    1,
+    3,
+    4
+  ],
+  "replicates": 1,
+  "trial_plans": 24,
+  "total_planned_trials": 480,
+  "token_cost_note": "Measured from live model API usage only. Not a currency cost.",
+  "injection_note": "Controlled faults are synthetic; incidence in natural traffic is separately logged as pre-injection generation errors.",
+  "completion_status": "complete",
+  "finish_utc": "2026-10-09T13:13:17.371495+00:00"
+}

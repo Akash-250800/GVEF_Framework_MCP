@@ -1,0 +1,11 @@
+﻿condition,retry_budget,n,completed_tasks,completion_rate,mean_tokens,mean_latency_seconds,success_change_from_previous_budget,token_change_from_previous_budget,dominated_by_previous_budget
+naive_retry,0,16,0,0.0,879.31,9.07,,,
+naive_retry,1,16,3,0.1875,1009.38,10.58,3,130.06,0
+naive_retry,2,16,3,0.1875,856.25,8.2,0,-153.12,0
+naive_retry,3,16,3,0.1875,1009.44,10.91,0,153.19,1
+naive_retry,4,16,3,0.1875,856.19,8.02,0,-153.25,0
+closed_loop,0,16,0,0.0,879.19,8.65,,,
+closed_loop,1,16,11,0.6875,4209.19,44.22,11,3330.0,0
+closed_loop,2,16,13,0.8125,5044.5,50.88,2,835.31,0
+closed_loop,3,16,15,0.9375,5027.0,50.85,2,-17.5,0
+closed_loop,4,16,16,1.0,5221.12,53.61,1,194.12,0

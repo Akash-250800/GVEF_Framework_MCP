@@ -1,0 +1,15 @@
+MCP thesis post-audit reconciliation (OFFLINE; no LLM rerun)
+Original result folders were not modified.
+
+1. Fault-injection correction: 1 record(s) corrected in audit_verification/corrected_baselines.
+   Retain original results_ollama_baselines for provenance.
+2. scheduled_vs_realised_fault_exposure.csv compares planned and actual injections across policies.
+   Rates are not equal across conditions; do not report them as equal actual fault exposure.
+3. RQ3_retry_budget_matched_descriptive.csv compares budgets within each policy/fault using two tasks.
+   This descriptive sample is too small to establish a universal optimum or causal break-even point.
+4. RQ1 spontaneous errors reflect selected SYNTHETIC tasks, not production MCP prevalence.
+5. The retry-budget manifest planned 240 but only 237 were saved; all unique policy configurations were covered.
+6. PACKAGE_FILE_HASHES_VERIFIED.json contains final source hashes and does not overwrite the original file.
+7. Verify HTTP response payload using: python MCP_Audit_Corrections.py --http while server is running.
+8. The recovery-logging rule in experiment.py was corrected for FUTURE trials; do not rerun past trials.
+9. Public publication/open licence cannot be inferred from local code alone.

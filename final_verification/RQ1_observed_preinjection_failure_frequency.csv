@@ -1,0 +1,8 @@
+﻿failure_category,observed_preinjection_count,all_model_proposals,observed_rate_per_proposal,scope
+malformed_payload,390,1306,0.298622,Qwen-generated tool proposals for controlled local MCP inventory tasks
+parameter_type_mismatch,0,1306,0.0,Qwen-generated tool proposals for controlled local MCP inventory tasks
+schema_mismatch,0,1306,0.0,Qwen-generated tool proposals for controlled local MCP inventory tasks
+transient_api,0,1306,0.0,Qwen-generated tool proposals for controlled local MCP inventory tasks
+incorrect_tool,43,1306,0.032925,Qwen-generated tool proposals for controlled local MCP inventory tasks
+semantic_failure,0,1306,0.0,Qwen-generated tool proposals for controlled local MCP inventory tasks
+safety_violation,0,1306,0.0,Qwen-generated tool proposals for controlled local MCP inventory tasks

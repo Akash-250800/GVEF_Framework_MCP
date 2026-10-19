@@ -1,0 +1,4 @@
+﻿condition,matched_scenarios,completed,completion_rate,mean_tokens,mean_latency_seconds,recovered
+no_verification,50,0,0.0,1224.58,14.36,0
+naive_retry,50,21,0.42,1517.44,18.52,21
+closed_loop,50,39,0.78,3677.76,36.99,50

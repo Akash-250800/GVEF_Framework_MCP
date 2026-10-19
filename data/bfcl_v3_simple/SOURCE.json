@@ -1,0 +1,16 @@
+{
+  "source": "https://huggingface.co/datasets/gorilla-llm/Berkeley-Function-Calling-Leaderboard/resolve/main",
+  "license": "Apache-2.0",
+  "files": {
+    "questions": {
+      "url": "https://huggingface.co/datasets/gorilla-llm/Berkeley-Function-Calling-Leaderboard/resolve/main/BFCL_v3_simple.json",
+      "sha256": "fbc37b2ad252bf9af985582e0e07b456173fe627d957491472ea9cef5fb83158",
+      "entries": 400
+    },
+    "answers": {
+      "url": "https://huggingface.co/datasets/gorilla-llm/Berkeley-Function-Calling-Leaderboard/resolve/main/possible_answer/BFCL_v3_simple.json",
+      "sha256": "2911a2bc00df82c4f999ffa64fedb0164cb88e96212ffa5972087eb91fd496ee",
+      "entries": 400
+    }
+  }
+}

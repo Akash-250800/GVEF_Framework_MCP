@@ -1,0 +1,4 @@
+﻿feedback_format,n,completed,completion_rate,mean_tokens,mean_latency_seconds,injected_faults,recovery_rate_given_injection
+raw_trace,24,22,0.916667,3458.46,31.99,21,1.0
+schema_diff,24,20,0.833333,4197.33,42.25,21,1.0
+natural_language,24,15,0.625,3901.0,33.65,21,1.0

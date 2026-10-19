@@ -1,0 +1,9 @@
+FINAL LOCAL RECONCILIATION CHECK: PASS
+Date UTC: 2026-10-10T11:27:44+00:00
+MCP source and complete trial evidence: PASS
+Baseline: 480; feedback: 72; retry: 237; BFCL: 60
+Corrected baseline: 480; verified hashes: 25
+Equal intended baseline schedules: 160 cells per condition; realised matched subset: 50 per condition
+All files saved under final_verification; original experiment folders untouched.
+IMPORTANT: Public release is a separate user-controlled GitHub action.
+IMPORTANT: Interpretation limits are in RESEARCH_RESULTS_READY_TO_USE.md

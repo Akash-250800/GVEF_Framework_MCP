@@ -1,0 +1,4 @@
+﻿condition,scheduled_trial_cells,scheduled_faulted_cells,realised_injected_cells,completed_tasks,completion_rate,mean_tokens,mean_latency_seconds,mean_retries
+no_verification,160,140,50,9,0.05625,877.29,9.12,0.0
+naive_retry,160,140,57,30,0.1875,983.77,9.45,1.663
+closed_loop,160,140,139,131,0.81875,4504.77,43.91,2.156

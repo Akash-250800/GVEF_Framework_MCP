@@ -1,0 +1,3 @@
+failure_category,count,all_model_proposals,observed_rate_per_proposal
+incorrect_tool,43,1306,0.032924961715160794
+malformed_payload,390,1306,0.2986217457886677

@@ -1,0 +1,565 @@
+timestamp_utc,task_id,source,mode,model,replicate,condition,fault,feedback_format,retry_budget,task_completed,completed_steps,injected_fault,injected_fault_recovered,model_proposals,spontaneous_preinjection_errors,tool_attempts,retry_count,circuit_breaker_open,latency_seconds,total_tokens,token_measurement_complete,last_error
+2026-10-09T10:26:11.628199+00:00,inventory_pen,synthetic_inventory,llm,qwen2.5:1.5b,1,no_verification,none,not_applicable,0,1,3,0,0,3,0,3,0,0,31.823223,1916,1,
+2026-10-09T10:26:19.856449+00:00,inventory_pen,synthetic_inventory,llm,qwen2.5:1.5b,1,naive_retry,none,not_applicable,2,0,0,0,0,1,1,3,2,1,8.17476,611,1,tool must be a string and args an object
+2026-10-09T10:26:56.508012+00:00,inventory_pen,synthetic_inventory,llm,qwen2.5:1.5b,1,closed_loop,none,schema_diff,2,1,3,0,0,4,1,4,1,0,36.598639,3396,1,
+2026-10-09T10:27:07.055725+00:00,inventory_pen,synthetic_inventory,llm,qwen2.5:1.5b,1,no_verification,malformed_json,not_applicable,0,0,1,1,0,2,0,2,0,1,10.500804,1222,1,Expecting value: line 1 column 34 (char 33)
+2026-10-09T10:27:22.002177+00:00,inventory_pen,synthetic_inventory,llm,qwen2.5:1.5b,1,naive_retry,malformed_json,not_applicable,2,0,1,1,0,2,0,4,2,1,14.882445,1222,1,Expecting value: line 1 column 34 (char 33)
+2026-10-09T10:27:50.740778+00:00,inventory_pen,synthetic_inventory,llm,qwen2.5:1.5b,1,closed_loop,malformed_json,schema_diff,2,1,3,1,1,4,0,4,1,0,28.683814,2860,1,
+2026-10-09T10:28:00.805558+00:00,inventory_pen,synthetic_inventory,llm,qwen2.5:1.5b,1,no_verification,type_mismatch,not_applicable,0,0,0,0,0,1,1,1,0,1,10.009198,611,1,tool must be a string and args an object
+2026-10-09T10:28:04.449503+00:00,inventory_pen,synthetic_inventory,llm,qwen2.5:1.5b,1,naive_retry,type_mismatch,not_applicable,2,0,0,0,0,1,1,3,2,1,3.585866,609,1,tool must be a string and args an object
+2026-10-09T10:28:48.052305+00:00,inventory_pen,synthetic_inventory,llm,qwen2.5:1.5b,1,closed_loop,type_mismatch,schema_diff,2,1,3,1,1,5,1,5,2,0,43.54571,4565,1,
+2026-10-09T10:28:58.494913+00:00,inventory_pen,synthetic_inventory,llm,qwen2.5:1.5b,1,no_verification,stale_schema,not_applicable,0,0,1,1,0,2,0,2,0,1,10.385896,1222,1,"Error executing tool reserve_stock: 1 validation error for reserve_stockArguments
+quantity
+  Field required [type=missing, input_value={'sku': 'PEN', 'quantity_old': 3}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.14/v/missing"
+2026-10-09T10:29:13.489224+00:00,inventory_pen,synthetic_inventory,llm,qwen2.5:1.5b,1,naive_retry,stale_schema,not_applicable,2,0,1,1,0,2,0,4,2,1,14.934904,1222,1,"Error executing tool reserve_stock: 1 validation error for reserve_stockArguments
+quantity
+  Field required [type=missing, input_value={'sku': 'PEN', 'quantity_old': 3}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.14/v/missing"
+2026-10-09T10:29:41.475372+00:00,inventory_pen,synthetic_inventory,llm,qwen2.5:1.5b,1,closed_loop,stale_schema,schema_diff,2,1,3,1,1,4,0,4,1,0,27.925132,2840,1,
+2026-10-09T10:29:50.101721+00:00,inventory_pen,synthetic_inventory,llm,qwen2.5:1.5b,1,no_verification,transient_api,not_applicable,0,0,0,0,0,1,1,1,0,1,8.566439,611,1,tool must be a string and args an object
+2026-10-09T10:29:53.475209+00:00,inventory_pen,synthetic_inventory,llm,qwen2.5:1.5b,1,naive_retry,transient_api,not_applicable,2,0,0,0,0,1,1,3,2,1,3.313688,609,1,tool must be a string and args an object
+2026-10-09T10:30:34.847675+00:00,inventory_pen,synthetic_inventory,llm,qwen2.5:1.5b,1,closed_loop,transient_api,schema_diff,2,1,3,1,1,5,1,5,2,0,41.312108,4515,1,
+2026-10-09T10:30:45.688965+00:00,inventory_pen,synthetic_inventory,llm,qwen2.5:1.5b,1,no_verification,transient_timeout,not_applicable,0,0,1,1,0,2,0,2,0,1,10.779508,1222,1,Injected upstream network timeout
+2026-10-09T10:31:10.438031+00:00,inventory_pen,synthetic_inventory,llm,qwen2.5:1.5b,1,naive_retry,transient_timeout,not_applicable,2,1,3,1,1,3,0,4,1,0,24.682203,1916,1,
+2026-10-09T10:32:25.571581+00:00,inventory_pen,synthetic_inventory,llm,qwen2.5:1.5b,1,closed_loop,transient_timeout,schema_diff,2,0,2,1,1,7,4,7,4,1,75.078934,6704,1,"Selected reserve_stock, but the current task requires check_stock"
+2026-10-09T10:32:36.069734+00:00,inventory_pen,synthetic_inventory,llm,qwen2.5:1.5b,1,no_verification,transient_rate_limit,not_applicable,0,0,1,1,0,2,0,2,0,1,10.425297,1222,1,Injected upstream API rate limit
+2026-10-09T10:33:00.080010+00:00,inventory_pen,synthetic_inventory,llm,qwen2.5:1.5b,1,naive_retry,transient_rate_limit,not_applicable,2,1,3,1,1,3,0,4,1,0,23.954319,1917,1,
+2026-10-09T10:33:47.506931+00:00,inventory_pen,synthetic_inventory,llm,qwen2.5:1.5b,1,closed_loop,transient_rate_limit,schema_diff,2,1,3,1,1,5,1,5,2,0,47.355464,4504,1,
+2026-10-09T10:33:57.930517+00:00,inventory_pen,synthetic_inventory,llm,qwen2.5:1.5b,1,no_verification,wrong_tool,not_applicable,0,0,1,1,0,2,0,2,0,1,10.368497,1222,1,Unsafe to retry state-changing operation without compensating rollback; escalation required
+2026-10-09T10:34:12.911285+00:00,inventory_pen,synthetic_inventory,llm,qwen2.5:1.5b,1,naive_retry,wrong_tool,not_applicable,2,0,1,1,0,2,0,2,0,1,14.926343,1222,1,Unsafe to retry state-changing operation without compensating rollback; escalation required
+2026-10-09T10:34:57.934588+00:00,inventory_pen,synthetic_inventory,llm,qwen2.5:1.5b,1,closed_loop,wrong_tool,schema_diff,2,0,2,1,1,6,3,6,3,1,44.967104,4779,1,"Selected reserve_stock, but the current task requires check_stock"
+2026-10-09T10:35:07.319426+00:00,inventory_notebook,synthetic_inventory,llm,qwen2.5:1.5b,1,no_verification,none,not_applicable,0,0,0,0,0,1,1,1,0,1,9.323746,613,1,tool must be a string and args an object
+2026-10-09T10:35:10.896196+00:00,inventory_notebook,synthetic_inventory,llm,qwen2.5:1.5b,1,naive_retry,none,not_applicable,2,0,0,0,0,1,1,3,2,1,3.51504,613,1,tool must be a string and args an object
+2026-10-09T10:35:52.848596+00:00,inventory_notebook,synthetic_inventory,llm,qwen2.5:1.5b,1,closed_loop,none,schema_diff,2,1,3,0,0,4,1,4,1,0,41.892808,3385,1,
+2026-10-09T10:35:57.264845+00:00,inventory_notebook,synthetic_inventory,llm,qwen2.5:1.5b,1,no_verification,malformed_json,not_applicable,0,0,0,0,0,1,1,1,0,1,4.359644,613,1,tool must be a string and args an object
+2026-10-09T10:36:00.930658+00:00,inventory_notebook,synthetic_inventory,llm,qwen2.5:1.5b,1,naive_retry,malformed_json,not_applicable,2,0,0,0,0,1,1,3,2,1,3.55051,613,1,tool must be a string and args an object
+2026-10-09T10:37:05.314200+00:00,inventory_notebook,synthetic_inventory,llm,qwen2.5:1.5b,1,closed_loop,malformed_json,schema_diff,2,1,3,1,1,7,3,7,4,0,64.332269,6621,1,
+2026-10-09T10:37:09.444450+00:00,inventory_notebook,synthetic_inventory,llm,qwen2.5:1.5b,1,no_verification,type_mismatch,not_applicable,0,0,0,0,0,1,1,1,0,1,4.064173,613,1,tool must be a string and args an object
+2026-10-09T10:37:12.968548+00:00,inventory_notebook,synthetic_inventory,llm,qwen2.5:1.5b,1,naive_retry,type_mismatch,not_applicable,2,0,0,0,0,1,1,3,2,1,3.464063,613,1,tool must be a string and args an object
+2026-10-09T10:38:21.149218+00:00,inventory_notebook,synthetic_inventory,llm,qwen2.5:1.5b,1,closed_loop,type_mismatch,schema_diff,2,1,3,1,1,7,3,7,4,0,68.128636,6994,1,
+2026-10-09T10:38:25.285545+00:00,inventory_notebook,synthetic_inventory,llm,qwen2.5:1.5b,1,no_verification,stale_schema,not_applicable,0,0,0,0,0,1,1,1,0,1,4.069233,613,1,tool must be a string and args an object
+2026-10-09T10:38:28.801962+00:00,inventory_notebook,synthetic_inventory,llm,qwen2.5:1.5b,1,naive_retry,stale_schema,not_applicable,2,0,0,0,0,1,1,3,2,1,3.456619,613,1,tool must be a string and args an object
+2026-10-09T10:39:09.473029+00:00,inventory_notebook,synthetic_inventory,llm,qwen2.5:1.5b,1,closed_loop,stale_schema,schema_diff,2,1,3,1,1,5,1,5,2,0,40.611168,4536,1,
+2026-10-09T10:39:13.623265+00:00,inventory_notebook,synthetic_inventory,llm,qwen2.5:1.5b,1,no_verification,transient_api,not_applicable,0,0,0,0,0,1,1,1,0,1,4.09039,613,1,tool must be a string and args an object
+2026-10-09T10:39:17.130472+00:00,inventory_notebook,synthetic_inventory,llm,qwen2.5:1.5b,1,naive_retry,transient_api,not_applicable,2,0,0,0,0,1,1,3,2,1,3.447229,613,1,tool must be a string and args an object
+2026-10-09T10:39:57.184715+00:00,inventory_notebook,synthetic_inventory,llm,qwen2.5:1.5b,1,closed_loop,transient_api,schema_diff,2,1,3,1,1,5,1,5,2,0,39.99466,4514,1,
+2026-10-09T10:40:01.323997+00:00,inventory_notebook,synthetic_inventory,llm,qwen2.5:1.5b,1,no_verification,transient_timeout,not_applicable,0,0,0,0,0,1,1,1,0,1,4.078192,613,1,tool must be a string and args an object
+2026-10-09T10:40:05.191594+00:00,inventory_notebook,synthetic_inventory,llm,qwen2.5:1.5b,1,naive_retry,transient_timeout,not_applicable,2,0,0,0,0,1,1,3,2,1,3.807662,613,1,tool must be a string and args an object
+2026-10-09T10:40:44.851748+00:00,inventory_notebook,synthetic_inventory,llm,qwen2.5:1.5b,1,closed_loop,transient_timeout,schema_diff,2,1,3,1,1,5,1,5,2,0,39.598474,4493,1,
+2026-10-09T10:40:49.011245+00:00,inventory_notebook,synthetic_inventory,llm,qwen2.5:1.5b,1,no_verification,transient_rate_limit,not_applicable,0,0,0,0,0,1,1,1,0,1,4.094849,613,1,tool must be a string and args an object
+2026-10-09T10:40:52.560702+00:00,inventory_notebook,synthetic_inventory,llm,qwen2.5:1.5b,1,naive_retry,transient_rate_limit,not_applicable,2,0,0,0,0,1,1,3,2,1,3.488214,613,1,tool must be a string and args an object
+2026-10-09T10:41:32.783572+00:00,inventory_notebook,synthetic_inventory,llm,qwen2.5:1.5b,1,closed_loop,transient_rate_limit,schema_diff,2,1,3,1,1,5,1,5,2,0,40.15542,4507,1,
+2026-10-09T10:41:36.933718+00:00,inventory_notebook,synthetic_inventory,llm,qwen2.5:1.5b,1,no_verification,wrong_tool,not_applicable,0,0,0,0,0,1,1,1,0,1,4.088058,613,1,tool must be a string and args an object
+2026-10-09T10:41:40.463602+00:00,inventory_notebook,synthetic_inventory,llm,qwen2.5:1.5b,1,naive_retry,wrong_tool,not_applicable,2,0,0,0,0,1,1,3,2,1,3.467857,613,1,tool must be a string and args an object
+2026-10-09T10:42:21.458548+00:00,inventory_notebook,synthetic_inventory,llm,qwen2.5:1.5b,1,closed_loop,wrong_tool,schema_diff,2,1,3,1,1,5,1,5,2,0,40.932586,4545,1,
+2026-10-09T10:42:45.266335+00:00,inventory_usb,synthetic_inventory,llm,qwen2.5:1.5b,1,no_verification,none,not_applicable,0,1,3,0,0,3,0,3,0,0,23.745063,1904,1,
+2026-10-09T10:43:14.221021+00:00,inventory_usb,synthetic_inventory,llm,qwen2.5:1.5b,1,naive_retry,none,not_applicable,2,1,3,0,0,3,0,3,0,0,28.895408,1904,1,
+2026-10-09T10:43:41.812416+00:00,inventory_usb,synthetic_inventory,llm,qwen2.5:1.5b,1,closed_loop,none,schema_diff,2,1,3,0,0,3,0,3,0,0,27.51927,1904,1,
+2026-10-09T10:44:01.129308+00:00,inventory_usb,synthetic_inventory,llm,qwen2.5:1.5b,1,no_verification,malformed_json,not_applicable,0,0,1,1,0,2,0,2,0,1,19.167819,1215,1,Expecting value: line 1 column 34 (char 33)
+2026-10-09T10:44:18.798624+00:00,inventory_usb,synthetic_inventory,llm,qwen2.5:1.5b,1,naive_retry,malformed_json,not_applicable,2,0,1,1,0,2,0,4,2,1,17.462988,1215,1,Expecting value: line 1 column 34 (char 33)
+2026-10-09T10:44:59.566373+00:00,inventory_usb,synthetic_inventory,llm,qwen2.5:1.5b,1,closed_loop,malformed_json,schema_diff,2,1,3,1,1,5,1,5,2,0,40.687845,3825,1,
+2026-10-09T10:45:17.510788+00:00,inventory_usb,synthetic_inventory,llm,qwen2.5:1.5b,1,no_verification,type_mismatch,not_applicable,0,0,1,1,0,2,0,2,0,1,17.844675,1215,1,"Error executing tool reserve_stock: 1 validation error for reserve_stockArguments
+quantity
+  Input should be a valid integer, unable to parse string as an integer [type=int_parsing, input_value='NOT_A_NUMBER', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.14/v/int_parsing"
+2026-10-09T10:45:36.295570+00:00,inventory_usb,synthetic_inventory,llm,qwen2.5:1.5b,1,naive_retry,type_mismatch,not_applicable,2,0,1,1,0,2,0,4,2,1,18.597119,1215,1,"Error executing tool reserve_stock: 1 validation error for reserve_stockArguments
+quantity
+  Input should be a valid integer, unable to parse string as an integer [type=int_parsing, input_value='NOT_A_NUMBER', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.14/v/int_parsing"
+2026-10-09T10:46:08.687288+00:00,inventory_usb,synthetic_inventory,llm,qwen2.5:1.5b,1,closed_loop,type_mismatch,schema_diff,2,1,3,1,1,4,0,4,1,0,32.311014,2835,1,
+2026-10-09T10:46:26.622460+00:00,inventory_usb,synthetic_inventory,llm,qwen2.5:1.5b,1,no_verification,stale_schema,not_applicable,0,0,1,1,0,2,0,2,0,1,17.833042,1215,1,"Error executing tool reserve_stock: 1 validation error for reserve_stockArguments
+quantity
+  Field required [type=missing, input_value={'sku': 'USB', 'quantity_old': 4}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.14/v/missing"
+2026-10-09T10:46:43.668365+00:00,inventory_usb,synthetic_inventory,llm,qwen2.5:1.5b,1,naive_retry,stale_schema,not_applicable,2,0,1,1,0,2,0,4,2,1,16.961215,1215,1,"Error executing tool reserve_stock: 1 validation error for reserve_stockArguments
+quantity
+  Field required [type=missing, input_value={'sku': 'USB', 'quantity_old': 4}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.14/v/missing"
+2026-10-09T10:47:15.141093+00:00,inventory_usb,synthetic_inventory,llm,qwen2.5:1.5b,1,closed_loop,stale_schema,schema_diff,2,1,3,1,1,4,0,4,1,0,31.314752,2820,1,
+2026-10-09T10:47:33.135686+00:00,inventory_usb,synthetic_inventory,llm,qwen2.5:1.5b,1,no_verification,transient_api,not_applicable,0,0,1,1,0,2,0,2,0,1,17.511255,1215,1,Injected temporary upstream HTTP 503 failure
+2026-10-09T10:47:59.332547+00:00,inventory_usb,synthetic_inventory,llm,qwen2.5:1.5b,1,naive_retry,transient_api,not_applicable,2,1,3,1,1,3,0,4,1,0,26.119128,1904,1,
+2026-10-09T10:48:26.573721+00:00,inventory_usb,synthetic_inventory,llm,qwen2.5:1.5b,1,closed_loop,transient_api,schema_diff,2,1,3,1,1,4,0,4,1,0,27.144604,2770,1,
+2026-10-09T10:48:42.044740+00:00,inventory_usb,synthetic_inventory,llm,qwen2.5:1.5b,1,no_verification,transient_timeout,not_applicable,0,0,1,1,0,2,0,2,0,1,15.390828,1215,1,Injected upstream network timeout
+2026-10-09T10:49:06.896578+00:00,inventory_usb,synthetic_inventory,llm,qwen2.5:1.5b,1,naive_retry,transient_timeout,not_applicable,2,1,3,1,1,3,0,4,1,0,24.780765,1904,1,
+2026-10-09T10:49:51.026288+00:00,inventory_usb,synthetic_inventory,llm,qwen2.5:1.5b,1,closed_loop,transient_timeout,schema_diff,2,1,3,1,1,6,2,6,3,0,44.061721,4701,1,
+2026-10-09T10:50:06.494017+00:00,inventory_usb,synthetic_inventory,llm,qwen2.5:1.5b,1,no_verification,transient_rate_limit,not_applicable,0,0,1,1,0,2,0,2,0,1,15.403604,1215,1,Injected upstream API rate limit
+2026-10-09T10:50:30.469784+00:00,inventory_usb,synthetic_inventory,llm,qwen2.5:1.5b,1,naive_retry,transient_rate_limit,not_applicable,2,1,3,1,1,3,0,4,1,0,23.891692,1904,1,
+2026-10-09T10:50:55.250859+00:00,inventory_usb,synthetic_inventory,llm,qwen2.5:1.5b,1,closed_loop,transient_rate_limit,schema_diff,2,1,3,1,1,4,0,4,1,0,24.709954,2758,1,
+2026-10-09T10:51:10.095412+00:00,inventory_usb,synthetic_inventory,llm,qwen2.5:1.5b,1,no_verification,wrong_tool,not_applicable,0,0,1,1,0,2,0,2,0,1,14.773865,1215,1,Unsafe to retry state-changing operation without compensating rollback; escalation required
+2026-10-09T10:51:25.013334+00:00,inventory_usb,synthetic_inventory,llm,qwen2.5:1.5b,1,naive_retry,wrong_tool,not_applicable,2,0,1,1,0,2,0,2,0,1,14.846841,1215,1,Unsafe to retry state-changing operation without compensating rollback; escalation required
+2026-10-09T10:52:09.908201+00:00,inventory_usb,synthetic_inventory,llm,qwen2.5:1.5b,1,closed_loop,wrong_tool,schema_diff,2,0,2,1,1,6,3,6,3,1,44.457775,4747,1,"Selected reserve_stock, but the current task requires check_stock"
+2026-10-09T10:52:19.974550+00:00,inventory_mouse,synthetic_inventory,llm,qwen2.5:1.5b,1,no_verification,none,not_applicable,0,0,0,0,0,1,1,1,0,1,9.999649,609,1,tool must be a string and args an object
+2026-10-09T10:52:25.047738+00:00,inventory_mouse,synthetic_inventory,llm,qwen2.5:1.5b,1,naive_retry,none,not_applicable,2,0,0,0,0,1,1,3,2,1,4.988056,611,1,tool must be a string and args an object
+2026-10-09T10:53:10.983643+00:00,inventory_mouse,synthetic_inventory,llm,qwen2.5:1.5b,1,closed_loop,none,schema_diff,2,1,3,0,0,4,1,4,1,0,45.834985,3394,1,
+2026-10-09T10:53:15.198194+00:00,inventory_mouse,synthetic_inventory,llm,qwen2.5:1.5b,1,no_verification,malformed_json,not_applicable,0,0,0,0,0,1,1,1,0,1,4.142119,611,1,tool must be a string and args an object
+2026-10-09T10:53:25.200745+00:00,inventory_mouse,synthetic_inventory,llm,qwen2.5:1.5b,1,naive_retry,malformed_json,not_applicable,2,0,1,1,0,2,0,4,2,1,9.928788,1221,1,Expecting value: line 1 column 34 (char 33)
+2026-10-09T10:54:13.119749+00:00,inventory_mouse,synthetic_inventory,llm,qwen2.5:1.5b,1,closed_loop,malformed_json,schema_diff,2,1,3,1,1,5,1,5,2,0,47.851983,4575,1,
+2026-10-09T10:54:17.336215+00:00,inventory_mouse,synthetic_inventory,llm,qwen2.5:1.5b,1,no_verification,type_mismatch,not_applicable,0,0,0,0,0,1,1,1,0,1,4.136537,611,1,tool must be a string and args an object
+2026-10-09T10:54:27.333509+00:00,inventory_mouse,synthetic_inventory,llm,qwen2.5:1.5b,1,naive_retry,type_mismatch,not_applicable,2,0,1,1,0,2,0,4,2,1,9.925175,1221,1,"Error executing tool reserve_stock: 1 validation error for reserve_stockArguments
+quantity
+  Input should be a valid integer, unable to parse string as an integer [type=int_parsing, input_value='NOT_A_NUMBER', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.14/v/int_parsing"
+2026-10-09T10:55:25.626436+00:00,inventory_mouse,synthetic_inventory,llm,qwen2.5:1.5b,1,closed_loop,type_mismatch,schema_diff,2,1,3,1,1,6,2,6,3,0,58.223823,5842,1,
+2026-10-09T10:55:29.832504+00:00,inventory_mouse,synthetic_inventory,llm,qwen2.5:1.5b,1,no_verification,stale_schema,not_applicable,0,0,0,0,0,1,1,1,0,1,4.129473,611,1,tool must be a string and args an object
+2026-10-09T10:55:39.827958+00:00,inventory_mouse,synthetic_inventory,llm,qwen2.5:1.5b,1,naive_retry,stale_schema,not_applicable,2,0,1,1,0,2,0,4,2,1,9.917102,1221,1,"Error executing tool reserve_stock: 1 validation error for reserve_stockArguments
+quantity
+  Field required [type=missing, input_value={'sku': 'MOUSE', 'quantity_old': 1}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.14/v/missing"
+2026-10-09T10:56:27.829105+00:00,inventory_mouse,synthetic_inventory,llm,qwen2.5:1.5b,1,closed_loop,stale_schema,schema_diff,2,1,3,1,1,5,1,5,2,0,47.925065,4566,1,
+2026-10-09T10:56:32.028180+00:00,inventory_mouse,synthetic_inventory,llm,qwen2.5:1.5b,1,no_verification,transient_api,not_applicable,0,0,0,0,0,1,1,1,0,1,4.122626,611,1,tool must be a string and args an object
+2026-10-09T10:56:51.258312+00:00,inventory_mouse,synthetic_inventory,llm,qwen2.5:1.5b,1,naive_retry,transient_api,not_applicable,2,1,3,1,1,3,0,4,1,0,19.158904,1915,1,
+2026-10-09T10:57:37.536861+00:00,inventory_mouse,synthetic_inventory,llm,qwen2.5:1.5b,1,closed_loop,transient_api,schema_diff,2,1,3,1,1,5,1,5,2,0,46.206357,4515,1,
+2026-10-09T10:57:41.751770+00:00,inventory_mouse,synthetic_inventory,llm,qwen2.5:1.5b,1,no_verification,transient_timeout,not_applicable,0,0,0,0,0,1,1,1,0,1,4.129434,611,1,tool must be a string and args an object
+2026-10-09T10:58:01.749728+00:00,inventory_mouse,synthetic_inventory,llm,qwen2.5:1.5b,1,naive_retry,transient_timeout,not_applicable,2,1,3,1,1,3,0,4,1,0,19.925912,1915,1,
+2026-10-09T10:58:50.400492+00:00,inventory_mouse,synthetic_inventory,llm,qwen2.5:1.5b,1,closed_loop,transient_timeout,schema_diff,2,1,3,1,1,5,1,5,2,0,48.568122,4477,1,
+2026-10-09T10:58:54.701898+00:00,inventory_mouse,synthetic_inventory,llm,qwen2.5:1.5b,1,no_verification,transient_rate_limit,not_applicable,0,0,0,0,0,1,1,1,0,1,4.05195,611,1,tool must be a string and args an object
+2026-10-09T10:59:13.657074+00:00,inventory_mouse,synthetic_inventory,llm,qwen2.5:1.5b,1,naive_retry,transient_rate_limit,not_applicable,2,1,3,1,1,3,0,4,1,0,18.874178,1915,1,
+2026-10-09T10:59:59.577804+00:00,inventory_mouse,synthetic_inventory,llm,qwen2.5:1.5b,1,closed_loop,transient_rate_limit,schema_diff,2,1,3,1,1,5,1,5,2,0,45.844741,4500,1,
+2026-10-09T11:00:03.858721+00:00,inventory_mouse,synthetic_inventory,llm,qwen2.5:1.5b,1,no_verification,wrong_tool,not_applicable,0,0,0,0,0,1,1,1,0,1,4.202813,611,1,tool must be a string and args an object
+2026-10-09T11:00:13.919830+00:00,inventory_mouse,synthetic_inventory,llm,qwen2.5:1.5b,1,naive_retry,wrong_tool,not_applicable,2,0,1,1,0,2,0,2,0,1,9.984979,1221,1,Unsafe to retry state-changing operation without compensating rollback; escalation required
+2026-10-09T11:01:00.869865+00:00,inventory_mouse,synthetic_inventory,llm,qwen2.5:1.5b,1,closed_loop,wrong_tool,schema_diff,2,1,3,1,1,5,1,5,2,0,46.882386,4539,1,
+2026-10-09T11:01:10.319972+00:00,inventory_cable,synthetic_inventory,llm,qwen2.5:1.5b,1,no_verification,none,not_applicable,0,0,0,0,0,1,1,1,0,1,9.373193,613,1,tool must be a string and args an object
+2026-10-09T11:01:14.272916+00:00,inventory_cable,synthetic_inventory,llm,qwen2.5:1.5b,1,naive_retry,none,not_applicable,2,0,0,0,0,1,1,3,2,1,3.871346,613,1,tool must be a string and args an object
+2026-10-09T11:01:59.173989+00:00,inventory_cable,synthetic_inventory,llm,qwen2.5:1.5b,1,closed_loop,none,schema_diff,2,1,3,0,0,4,1,4,1,0,44.832313,3404,1,
+2026-10-09T11:02:04.108343+00:00,inventory_cable,synthetic_inventory,llm,qwen2.5:1.5b,1,no_verification,malformed_json,not_applicable,0,0,0,0,0,1,1,1,0,1,4.84894,613,1,tool must be a string and args an object
+2026-10-09T11:02:07.875734+00:00,inventory_cable,synthetic_inventory,llm,qwen2.5:1.5b,1,naive_retry,malformed_json,not_applicable,2,0,0,0,0,1,1,3,2,1,3.68145,613,1,tool must be a string and args an object
+2026-10-09T11:02:51.574623+00:00,inventory_cable,synthetic_inventory,llm,qwen2.5:1.5b,1,closed_loop,malformed_json,schema_diff,2,1,3,1,1,5,1,5,2,0,43.621028,4574,1,
+2026-10-09T11:02:55.833436+00:00,inventory_cable,synthetic_inventory,llm,qwen2.5:1.5b,1,no_verification,type_mismatch,not_applicable,0,0,0,0,0,1,1,1,0,1,4.179072,613,1,tool must be a string and args an object
+2026-10-09T11:02:59.438948+00:00,inventory_cable,synthetic_inventory,llm,qwen2.5:1.5b,1,naive_retry,type_mismatch,not_applicable,2,0,0,0,0,1,1,3,2,1,3.52927,613,1,tool must be a string and args an object
+2026-10-09T11:04:07.165010+00:00,inventory_cable,synthetic_inventory,llm,qwen2.5:1.5b,1,closed_loop,type_mismatch,schema_diff,2,1,3,1,1,7,3,7,4,0,67.653953,6619,1,
+2026-10-09T11:04:12.390335+00:00,inventory_cable,synthetic_inventory,llm,qwen2.5:1.5b,1,no_verification,stale_schema,not_applicable,0,0,0,0,0,1,1,1,0,1,5.088503,613,1,tool must be a string and args an object
+2026-10-09T11:04:16.151285+00:00,inventory_cable,synthetic_inventory,llm,qwen2.5:1.5b,1,naive_retry,stale_schema,not_applicable,2,0,0,0,0,1,1,3,2,1,3.677384,613,1,tool must be a string and args an object
+2026-10-09T11:05:04.670627+00:00,inventory_cable,synthetic_inventory,llm,qwen2.5:1.5b,1,closed_loop,stale_schema,schema_diff,2,1,3,1,1,5,1,5,2,0,48.437552,4564,1,
+2026-10-09T11:05:10.276026+00:00,inventory_cable,synthetic_inventory,llm,qwen2.5:1.5b,1,no_verification,transient_api,not_applicable,0,0,0,0,0,1,1,1,0,1,5.511371,613,1,tool must be a string and args an object
+2026-10-09T11:05:14.733555+00:00,inventory_cable,synthetic_inventory,llm,qwen2.5:1.5b,1,naive_retry,transient_api,not_applicable,2,0,0,0,0,1,1,3,2,1,4.374212,613,1,tool must be a string and args an object
+2026-10-09T11:05:58.953622+00:00,inventory_cable,synthetic_inventory,llm,qwen2.5:1.5b,1,closed_loop,transient_api,schema_diff,2,1,3,0,0,5,2,5,2,0,44.141458,4559,1,
+2026-10-09T11:06:03.472922+00:00,inventory_cable,synthetic_inventory,llm,qwen2.5:1.5b,1,no_verification,transient_timeout,not_applicable,0,0,0,0,0,1,1,1,0,1,4.435456,613,1,tool must be a string and args an object
+2026-10-09T11:06:07.674617+00:00,inventory_cable,synthetic_inventory,llm,qwen2.5:1.5b,1,naive_retry,transient_timeout,not_applicable,2,0,0,0,0,1,1,3,2,1,4.109448,613,1,tool must be a string and args an object
+2026-10-09T11:06:48.807706+00:00,inventory_cable,synthetic_inventory,llm,qwen2.5:1.5b,1,closed_loop,transient_timeout,schema_diff,2,1,3,1,1,5,1,5,2,0,41.048161,4496,1,
+2026-10-09T11:06:53.177780+00:00,inventory_cable,synthetic_inventory,llm,qwen2.5:1.5b,1,no_verification,transient_rate_limit,not_applicable,0,0,0,0,0,1,1,1,0,1,4.286378,613,1,tool must be a string and args an object
+2026-10-09T11:06:56.804776+00:00,inventory_cable,synthetic_inventory,llm,qwen2.5:1.5b,1,naive_retry,transient_rate_limit,not_applicable,2,0,0,0,0,1,1,3,2,1,3.546534,613,1,tool must be a string and args an object
+2026-10-09T11:07:38.317549+00:00,inventory_cable,synthetic_inventory,llm,qwen2.5:1.5b,1,closed_loop,transient_rate_limit,schema_diff,2,1,3,1,1,5,1,5,2,0,41.432016,4525,1,
+2026-10-09T11:07:42.577031+00:00,inventory_cable,synthetic_inventory,llm,qwen2.5:1.5b,1,no_verification,wrong_tool,not_applicable,0,0,0,0,0,1,1,1,0,1,4.177264,613,1,tool must be a string and args an object
+2026-10-09T11:07:46.167466+00:00,inventory_cable,synthetic_inventory,llm,qwen2.5:1.5b,1,naive_retry,wrong_tool,not_applicable,2,0,0,0,0,1,1,3,2,1,3.510742,613,1,tool must be a string and args an object
+2026-10-09T11:08:28.529899+00:00,inventory_cable,synthetic_inventory,llm,qwen2.5:1.5b,1,closed_loop,wrong_tool,schema_diff,2,1,3,1,1,5,1,5,2,0,42.283174,4551,1,
+2026-10-09T11:08:38.052363+00:00,inventory_keyboard,synthetic_inventory,llm,qwen2.5:1.5b,1,no_verification,none,not_applicable,0,0,0,0,0,1,1,1,0,1,9.445211,613,1,tool must be a string and args an object
+2026-10-09T11:08:41.632164+00:00,inventory_keyboard,synthetic_inventory,llm,qwen2.5:1.5b,1,naive_retry,none,not_applicable,2,0,0,0,0,1,1,3,2,1,3.494969,613,1,tool must be a string and args an object
+2026-10-09T11:09:24.825872+00:00,inventory_keyboard,synthetic_inventory,llm,qwen2.5:1.5b,1,closed_loop,none,schema_diff,2,1,3,0,0,4,1,4,1,0,43.121052,3390,1,
+2026-10-09T11:09:28.693750+00:00,inventory_keyboard,synthetic_inventory,llm,qwen2.5:1.5b,1,no_verification,malformed_json,not_applicable,0,0,0,0,0,1,1,1,0,1,3.780416,608,1,Extra data: line 2 column 1 (char 58)
+2026-10-09T11:09:32.249670+00:00,inventory_keyboard,synthetic_inventory,llm,qwen2.5:1.5b,1,naive_retry,malformed_json,not_applicable,2,0,0,0,0,1,1,3,2,1,3.475081,613,1,tool must be a string and args an object
+2026-10-09T11:10:15.690890+00:00,inventory_keyboard,synthetic_inventory,llm,qwen2.5:1.5b,1,closed_loop,malformed_json,schema_diff,2,1,3,1,1,5,1,5,2,0,43.367252,4600,1,
+2026-10-09T11:10:20.103629+00:00,inventory_keyboard,synthetic_inventory,llm,qwen2.5:1.5b,1,no_verification,type_mismatch,not_applicable,0,0,0,0,0,1,1,1,0,1,4.319568,608,1,Extra data: line 2 column 1 (char 58)
+2026-10-09T11:10:23.675394+00:00,inventory_keyboard,synthetic_inventory,llm,qwen2.5:1.5b,1,naive_retry,type_mismatch,not_applicable,2,0,0,0,0,1,1,3,2,1,3.490024,613,1,tool must be a string and args an object
+2026-10-09T11:11:07.230188+00:00,inventory_keyboard,synthetic_inventory,llm,qwen2.5:1.5b,1,closed_loop,type_mismatch,schema_diff,2,1,3,1,1,5,1,5,2,0,43.473183,4596,1,
+2026-10-09T11:11:11.193124+00:00,inventory_keyboard,synthetic_inventory,llm,qwen2.5:1.5b,1,no_verification,stale_schema,not_applicable,0,0,0,0,0,1,1,1,0,1,3.882154,608,1,Extra data: line 2 column 1 (char 58)
+2026-10-09T11:11:16.063273+00:00,inventory_keyboard,synthetic_inventory,llm,qwen2.5:1.5b,1,naive_retry,stale_schema,not_applicable,2,0,0,0,0,1,1,3,2,1,3.970287,613,1,tool must be a string and args an object
+2026-10-09T11:11:59.263988+00:00,inventory_keyboard,synthetic_inventory,llm,qwen2.5:1.5b,1,closed_loop,stale_schema,schema_diff,2,1,3,1,1,5,1,5,2,0,43.113843,4563,1,
+2026-10-09T11:12:03.128288+00:00,inventory_keyboard,synthetic_inventory,llm,qwen2.5:1.5b,1,no_verification,transient_api,not_applicable,0,0,0,0,0,1,1,1,0,1,3.781102,608,1,Extra data: line 2 column 1 (char 58)
+2026-10-09T11:12:06.784875+00:00,inventory_keyboard,synthetic_inventory,llm,qwen2.5:1.5b,1,naive_retry,transient_api,not_applicable,2,0,0,0,0,1,1,3,2,1,3.572881,613,1,tool must be a string and args an object
+2026-10-09T11:12:48.727629+00:00,inventory_keyboard,synthetic_inventory,llm,qwen2.5:1.5b,1,closed_loop,transient_api,schema_diff,2,1,3,1,1,5,1,5,2,0,41.860719,4536,1,
+2026-10-09T11:12:52.981111+00:00,inventory_keyboard,synthetic_inventory,llm,qwen2.5:1.5b,1,no_verification,transient_timeout,not_applicable,0,0,0,0,0,1,1,1,0,1,4.168609,608,1,Extra data: line 2 column 1 (char 58)
+2026-10-09T11:12:56.555267+00:00,inventory_keyboard,synthetic_inventory,llm,qwen2.5:1.5b,1,naive_retry,transient_timeout,not_applicable,2,0,0,0,0,1,1,3,2,1,3.491165,613,1,tool must be a string and args an object
+2026-10-09T11:13:51.238060+00:00,inventory_keyboard,synthetic_inventory,llm,qwen2.5:1.5b,1,closed_loop,transient_timeout,schema_diff,2,1,3,1,1,7,3,7,4,0,54.599903,6447,1,
+2026-10-09T11:13:55.104659+00:00,inventory_keyboard,synthetic_inventory,llm,qwen2.5:1.5b,1,no_verification,transient_rate_limit,not_applicable,0,0,0,0,0,1,1,1,0,1,3.777028,608,1,Extra data: line 2 column 1 (char 58)
+2026-10-09T11:13:59.129338+00:00,inventory_keyboard,synthetic_inventory,llm,qwen2.5:1.5b,1,naive_retry,transient_rate_limit,not_applicable,2,0,0,0,0,1,1,3,2,1,3.506532,613,1,tool must be a string and args an object
+2026-10-09T11:14:40.287346+00:00,inventory_keyboard,synthetic_inventory,llm,qwen2.5:1.5b,1,closed_loop,transient_rate_limit,schema_diff,2,1,3,1,1,5,1,5,2,0,41.073276,4506,1,
+2026-10-09T11:14:44.155285+00:00,inventory_keyboard,synthetic_inventory,llm,qwen2.5:1.5b,1,no_verification,wrong_tool,not_applicable,0,0,0,0,0,1,1,1,0,1,3.783689,608,1,Extra data: line 2 column 1 (char 58)
+2026-10-09T11:14:47.738974+00:00,inventory_keyboard,synthetic_inventory,llm,qwen2.5:1.5b,1,naive_retry,wrong_tool,not_applicable,2,0,0,0,0,1,1,3,2,1,3.498783,613,1,tool must be a string and args an object
+2026-10-09T11:15:52.966452+00:00,inventory_keyboard,synthetic_inventory,llm,qwen2.5:1.5b,1,closed_loop,wrong_tool,schema_diff,2,0,2,1,1,7,4,7,4,1,65.142559,6576,1,"Selected reserve_stock, but the current task requires check_stock"
+2026-10-09T11:16:02.428760+00:00,inventory_monitor,synthetic_inventory,llm,qwen2.5:1.5b,1,no_verification,none,not_applicable,0,0,0,0,0,1,1,1,0,1,9.384222,613,1,tool must be a string and args an object
+2026-10-09T11:16:22.556323+00:00,inventory_monitor,synthetic_inventory,llm,qwen2.5:1.5b,1,naive_retry,none,not_applicable,2,1,3,0,0,3,0,3,0,0,20.045639,1922,1,
+2026-10-09T11:17:06.651149+00:00,inventory_monitor,synthetic_inventory,llm,qwen2.5:1.5b,1,closed_loop,none,schema_diff,2,1,3,0,0,4,1,4,1,0,44.003302,3386,1,
+2026-10-09T11:17:11.150026+00:00,inventory_monitor,synthetic_inventory,llm,qwen2.5:1.5b,1,no_verification,malformed_json,not_applicable,0,0,0,0,0,1,1,1,0,1,4.418832,613,1,tool must be a string and args an object
+2026-10-09T11:17:14.814251+00:00,inventory_monitor,synthetic_inventory,llm,qwen2.5:1.5b,1,naive_retry,malformed_json,not_applicable,2,0,0,0,0,1,1,3,2,1,3.570002,613,1,tool must be a string and args an object
+2026-10-09T11:18:09.495082+00:00,inventory_monitor,synthetic_inventory,llm,qwen2.5:1.5b,1,closed_loop,malformed_json,schema_diff,2,1,3,1,1,6,2,6,3,0,54.590269,5856,1,
+2026-10-09T11:18:13.729195+00:00,inventory_monitor,synthetic_inventory,llm,qwen2.5:1.5b,1,no_verification,type_mismatch,not_applicable,0,0,0,0,0,1,1,1,0,1,4.147458,613,1,tool must be a string and args an object
+2026-10-09T11:18:17.372773+00:00,inventory_monitor,synthetic_inventory,llm,qwen2.5:1.5b,1,naive_retry,type_mismatch,not_applicable,2,0,0,0,0,1,1,3,2,1,3.556658,613,1,tool must be a string and args an object
+2026-10-09T11:19:09.539650+00:00,inventory_monitor,synthetic_inventory,llm,qwen2.5:1.5b,1,closed_loop,type_mismatch,schema_diff,2,1,3,1,1,6,2,6,3,0,52.087177,5864,1,
+2026-10-09T11:19:13.760519+00:00,inventory_monitor,synthetic_inventory,llm,qwen2.5:1.5b,1,no_verification,stale_schema,not_applicable,0,0,0,0,0,1,1,1,0,1,4.133056,613,1,tool must be a string and args an object
+2026-10-09T11:19:17.357736+00:00,inventory_monitor,synthetic_inventory,llm,qwen2.5:1.5b,1,naive_retry,stale_schema,not_applicable,2,0,0,0,0,1,1,3,2,1,3.505664,613,1,tool must be a string and args an object
+2026-10-09T11:20:10.955084+00:00,inventory_monitor,synthetic_inventory,llm,qwen2.5:1.5b,1,closed_loop,stale_schema,schema_diff,2,1,3,1,1,6,2,6,3,0,53.505348,5865,1,
+2026-10-09T11:20:16.359045+00:00,inventory_monitor,synthetic_inventory,llm,qwen2.5:1.5b,1,no_verification,transient_api,not_applicable,0,0,0,0,0,1,1,1,0,1,5.290161,613,1,tool must be a string and args an object
+2026-10-09T11:20:20.108616+00:00,inventory_monitor,synthetic_inventory,llm,qwen2.5:1.5b,1,naive_retry,transient_api,not_applicable,2,0,0,0,0,1,1,3,2,1,3.660127,613,1,tool must be a string and args an object
+2026-10-09T11:21:13.993647+00:00,inventory_monitor,synthetic_inventory,llm,qwen2.5:1.5b,1,closed_loop,transient_api,schema_diff,2,1,3,1,1,7,3,7,4,0,53.800644,6467,1,
+2026-10-09T11:21:18.276541+00:00,inventory_monitor,synthetic_inventory,llm,qwen2.5:1.5b,1,no_verification,transient_timeout,not_applicable,0,0,0,0,0,1,1,1,0,1,4.187018,613,1,tool must be a string and args an object
+2026-10-09T11:21:21.875153+00:00,inventory_monitor,synthetic_inventory,llm,qwen2.5:1.5b,1,naive_retry,transient_timeout,not_applicable,2,0,0,0,0,1,1,3,2,1,3.506894,613,1,tool must be a string and args an object
+2026-10-09T11:22:12.844314+00:00,inventory_monitor,synthetic_inventory,llm,qwen2.5:1.5b,1,closed_loop,transient_timeout,schema_diff,2,1,3,1,1,6,2,6,3,0,50.88985,5740,1,
+2026-10-09T11:22:17.073317+00:00,inventory_monitor,synthetic_inventory,llm,qwen2.5:1.5b,1,no_verification,transient_rate_limit,not_applicable,0,0,0,0,0,1,1,1,0,1,4.133686,613,1,tool must be a string and args an object
+2026-10-09T11:22:20.686661+00:00,inventory_monitor,synthetic_inventory,llm,qwen2.5:1.5b,1,naive_retry,transient_rate_limit,not_applicable,2,0,0,0,0,1,1,3,2,1,3.525864,613,1,tool must be a string and args an object
+2026-10-09T11:23:02.143523+00:00,inventory_monitor,synthetic_inventory,llm,qwen2.5:1.5b,1,closed_loop,transient_rate_limit,schema_diff,2,1,3,1,1,5,1,5,2,0,41.369702,4507,1,
+2026-10-09T11:23:06.369791+00:00,inventory_monitor,synthetic_inventory,llm,qwen2.5:1.5b,1,no_verification,wrong_tool,not_applicable,0,0,0,0,0,1,1,1,0,1,4.138631,613,1,tool must be a string and args an object
+2026-10-09T11:23:09.966218+00:00,inventory_monitor,synthetic_inventory,llm,qwen2.5:1.5b,1,naive_retry,wrong_tool,not_applicable,2,0,0,0,0,1,1,3,2,1,3.499596,613,1,tool must be a string and args an object
+2026-10-09T11:24:15.637003+00:00,inventory_monitor,synthetic_inventory,llm,qwen2.5:1.5b,1,closed_loop,wrong_tool,schema_diff,2,0,2,1,1,7,4,7,4,1,65.583082,6582,1,"Selected reserve_stock, but the current task requires check_stock"
+2026-10-09T11:24:24.747710+00:00,inventory_lamp,synthetic_inventory,llm,qwen2.5:1.5b,1,no_verification,none,not_applicable,0,0,0,0,0,1,1,1,0,1,9.021598,608,1,Extra data: line 2 column 1 (char 54)
+2026-10-09T11:24:27.983155+00:00,inventory_lamp,synthetic_inventory,llm,qwen2.5:1.5b,1,naive_retry,none,not_applicable,2,0,0,0,0,1,1,3,2,1,3.145276,608,1,Extra data: line 2 column 1 (char 54)
+2026-10-09T11:25:27.544435+00:00,inventory_lamp,synthetic_inventory,llm,qwen2.5:1.5b,1,closed_loop,none,schema_diff,2,1,3,0,0,5,2,5,2,0,59.472975,4750,1,
+2026-10-09T11:25:31.770138+00:00,inventory_lamp,synthetic_inventory,llm,qwen2.5:1.5b,1,no_verification,malformed_json,not_applicable,0,0,0,0,0,1,1,1,0,1,4.136457,613,1,tool must be a string and args an object
+2026-10-09T11:25:35.705316+00:00,inventory_lamp,synthetic_inventory,llm,qwen2.5:1.5b,1,naive_retry,malformed_json,not_applicable,2,0,0,0,0,1,1,3,2,1,3.495548,613,1,tool must be a string and args an object
+2026-10-09T11:26:19.723671+00:00,inventory_lamp,synthetic_inventory,llm,qwen2.5:1.5b,1,closed_loop,malformed_json,schema_diff,2,1,3,1,1,5,1,5,2,0,43.929694,4589,1,
+2026-10-09T11:26:23.894794+00:00,inventory_lamp,synthetic_inventory,llm,qwen2.5:1.5b,1,no_verification,type_mismatch,not_applicable,0,0,0,0,0,1,1,1,0,1,4.082582,613,1,tool must be a string and args an object
+2026-10-09T11:26:27.673279+00:00,inventory_lamp,synthetic_inventory,llm,qwen2.5:1.5b,1,naive_retry,type_mismatch,not_applicable,2,0,0,0,0,1,1,3,2,1,3.432996,613,1,tool must be a string and args an object
+2026-10-09T11:27:09.707296+00:00,inventory_lamp,synthetic_inventory,llm,qwen2.5:1.5b,1,closed_loop,type_mismatch,schema_diff,2,1,3,1,1,5,1,5,2,0,41.950212,4585,1,
+2026-10-09T11:27:14.108823+00:00,inventory_lamp,synthetic_inventory,llm,qwen2.5:1.5b,1,no_verification,stale_schema,not_applicable,0,0,0,0,0,1,1,1,0,1,4.304875,613,1,tool must be a string and args an object
+2026-10-09T11:27:17.773089+00:00,inventory_lamp,synthetic_inventory,llm,qwen2.5:1.5b,1,naive_retry,stale_schema,not_applicable,2,0,0,0,0,1,1,3,2,1,3.572857,613,1,tool must be a string and args an object
+2026-10-09T11:28:00.319998+00:00,inventory_lamp,synthetic_inventory,llm,qwen2.5:1.5b,1,closed_loop,stale_schema,schema_diff,2,1,3,1,1,5,1,5,2,0,42.453091,4575,1,
+2026-10-09T11:28:04.585549+00:00,inventory_lamp,synthetic_inventory,llm,qwen2.5:1.5b,1,no_verification,transient_api,not_applicable,0,0,0,0,0,1,1,1,0,1,4.172631,613,1,tool must be a string and args an object
+2026-10-09T11:28:08.254080+00:00,inventory_lamp,synthetic_inventory,llm,qwen2.5:1.5b,1,naive_retry,transient_api,not_applicable,2,0,0,0,0,1,1,3,2,1,3.582047,613,1,tool must be a string and args an object
+2026-10-09T11:28:49.313231+00:00,inventory_lamp,synthetic_inventory,llm,qwen2.5:1.5b,1,closed_loop,transient_api,schema_diff,2,1,3,1,1,5,1,5,2,0,40.959193,4508,1,
+2026-10-09T11:28:53.541090+00:00,inventory_lamp,synthetic_inventory,llm,qwen2.5:1.5b,1,no_verification,transient_timeout,not_applicable,0,0,0,0,0,1,1,1,0,1,4.135823,613,1,tool must be a string and args an object
+2026-10-09T11:28:57.118847+00:00,inventory_lamp,synthetic_inventory,llm,qwen2.5:1.5b,1,naive_retry,transient_timeout,not_applicable,2,0,0,0,0,1,1,3,2,1,3.486382,613,1,tool must be a string and args an object
+2026-10-09T11:29:37.523780+00:00,inventory_lamp,synthetic_inventory,llm,qwen2.5:1.5b,1,closed_loop,transient_timeout,schema_diff,2,1,3,1,1,5,1,5,2,0,40.321257,4493,1,
+2026-10-09T11:29:41.757778+00:00,inventory_lamp,synthetic_inventory,llm,qwen2.5:1.5b,1,no_verification,transient_rate_limit,not_applicable,0,0,0,0,0,1,1,1,0,1,4.135068,613,1,tool must be a string and args an object
+2026-10-09T11:29:45.338745+00:00,inventory_lamp,synthetic_inventory,llm,qwen2.5:1.5b,1,naive_retry,transient_rate_limit,not_applicable,2,0,0,0,0,1,1,3,2,1,3.485161,613,1,tool must be a string and args an object
+2026-10-09T11:30:26.692759+00:00,inventory_lamp,synthetic_inventory,llm,qwen2.5:1.5b,1,closed_loop,transient_rate_limit,schema_diff,2,1,3,1,1,5,1,5,2,0,41.262341,4528,1,
+2026-10-09T11:30:30.920582+00:00,inventory_lamp,synthetic_inventory,llm,qwen2.5:1.5b,1,no_verification,wrong_tool,not_applicable,0,0,0,0,0,1,1,1,0,1,4.134849,613,1,tool must be a string and args an object
+2026-10-09T11:30:35.541164+00:00,inventory_lamp,synthetic_inventory,llm,qwen2.5:1.5b,1,naive_retry,wrong_tool,not_applicable,2,0,0,0,0,1,1,3,2,1,4.049521,613,1,tool must be a string and args an object
+2026-10-09T11:31:42.341010+00:00,inventory_lamp,synthetic_inventory,llm,qwen2.5:1.5b,1,closed_loop,wrong_tool,schema_diff,2,0,2,1,1,7,4,7,4,1,66.70125,6506,1,"Selected reserve_stock, but the current task requires check_stock"
+2026-10-09T11:32:08.531513+00:00,inventory_stapler,synthetic_inventory,llm,qwen2.5:1.5b,1,no_verification,none,not_applicable,0,1,3,0,0,3,0,3,0,0,26.103578,1944,1,
+2026-10-09T11:32:17.210774+00:00,inventory_stapler,synthetic_inventory,llm,qwen2.5:1.5b,1,naive_retry,none,not_applicable,2,0,0,0,0,1,1,3,2,1,8.570322,612,1,Extra data: line 2 column 1 (char 57)
+2026-10-09T11:33:19.997667+00:00,inventory_stapler,synthetic_inventory,llm,qwen2.5:1.5b,1,closed_loop,none,schema_diff,2,0,2,0,0,6,4,6,3,1,62.694426,5791,1,Extra data: line 2 column 1 (char 57)
+2026-10-09T11:33:24.367705+00:00,inventory_stapler,synthetic_inventory,llm,qwen2.5:1.5b,1,no_verification,malformed_json,not_applicable,0,0,0,0,0,1,1,1,0,1,4.27512,617,1,tool must be a string and args an object
+2026-10-09T11:33:28.120432+00:00,inventory_stapler,synthetic_inventory,llm,qwen2.5:1.5b,1,naive_retry,malformed_json,not_applicable,2,0,0,0,0,1,1,3,2,1,3.66032,617,1,tool must be a string and args an object
+2026-10-09T11:34:53.404172+00:00,inventory_stapler,synthetic_inventory,llm,qwen2.5:1.5b,1,closed_loop,malformed_json,schema_diff,2,0,2,1,1,7,4,7,4,1,85.197907,7119,1,"Selected reserve_stock, but the current task requires check_stock"
+2026-10-09T11:34:58.081795+00:00,inventory_stapler,synthetic_inventory,llm,qwen2.5:1.5b,1,no_verification,type_mismatch,not_applicable,0,0,0,0,0,1,1,1,0,1,4.572944,617,1,tool must be a string and args an object
+2026-10-09T11:35:02.095281+00:00,inventory_stapler,synthetic_inventory,llm,qwen2.5:1.5b,1,naive_retry,type_mismatch,not_applicable,2,0,0,0,0,1,1,3,2,1,3.904805,617,1,tool must be a string and args an object
+2026-10-09T11:36:27.612682+00:00,inventory_stapler,synthetic_inventory,llm,qwen2.5:1.5b,1,closed_loop,type_mismatch,schema_diff,2,0,2,1,1,7,4,7,4,1,85.422821,7254,1,Extra data: line 2 column 1 (char 57)
+2026-10-09T11:36:32.213196+00:00,inventory_stapler,synthetic_inventory,llm,qwen2.5:1.5b,1,no_verification,stale_schema,not_applicable,0,0,0,0,0,1,1,1,0,1,4.172917,617,1,tool must be a string and args an object
+2026-10-09T11:36:35.958236+00:00,inventory_stapler,synthetic_inventory,llm,qwen2.5:1.5b,1,naive_retry,stale_schema,not_applicable,2,0,0,0,0,1,1,3,2,1,3.650156,617,1,tool must be a string and args an object
+2026-10-09T11:38:00.351410+00:00,inventory_stapler,synthetic_inventory,llm,qwen2.5:1.5b,1,closed_loop,stale_schema,schema_diff,2,0,2,1,1,7,4,7,4,1,84.299812,7078,1,Extra data: line 2 column 1 (char 57)
+2026-10-09T11:38:05.219534+00:00,inventory_stapler,synthetic_inventory,llm,qwen2.5:1.5b,1,no_verification,transient_api,not_applicable,0,0,0,0,0,1,1,1,0,1,4.749274,617,1,tool must be a string and args an object
+2026-10-09T11:38:09.271959+00:00,inventory_stapler,synthetic_inventory,llm,qwen2.5:1.5b,1,naive_retry,transient_api,not_applicable,2,0,0,0,0,1,1,3,2,1,3.940544,617,1,tool must be a string and args an object
+2026-10-09T11:38:54.680520+00:00,inventory_stapler,synthetic_inventory,llm,qwen2.5:1.5b,1,closed_loop,transient_api,schema_diff,2,1,3,1,1,5,1,5,2,0,45.301914,4570,1,
+2026-10-09T11:38:59.066683+00:00,inventory_stapler,synthetic_inventory,llm,qwen2.5:1.5b,1,no_verification,transient_timeout,not_applicable,0,0,0,0,0,1,1,1,0,1,4.2839,617,1,tool must be a string and args an object
+2026-10-09T11:39:02.788533+00:00,inventory_stapler,synthetic_inventory,llm,qwen2.5:1.5b,1,naive_retry,transient_timeout,not_applicable,2,0,0,0,0,1,1,3,2,1,3.632033,617,1,tool must be a string and args an object
+2026-10-09T11:39:43.222853+00:00,inventory_stapler,synthetic_inventory,llm,qwen2.5:1.5b,1,closed_loop,transient_timeout,schema_diff,2,1,3,1,1,5,1,5,2,0,40.329291,4532,1,
+2026-10-09T11:39:47.575884+00:00,inventory_stapler,synthetic_inventory,llm,qwen2.5:1.5b,1,no_verification,transient_rate_limit,not_applicable,0,0,0,0,0,1,1,1,0,1,4.259999,617,1,tool must be a string and args an object
+2026-10-09T11:39:51.308355+00:00,inventory_stapler,synthetic_inventory,llm,qwen2.5:1.5b,1,naive_retry,transient_rate_limit,not_applicable,2,0,0,0,0,1,1,3,2,1,3.640336,617,1,tool must be a string and args an object
+2026-10-09T11:40:33.493623+00:00,inventory_stapler,synthetic_inventory,llm,qwen2.5:1.5b,1,closed_loop,transient_rate_limit,schema_diff,2,1,3,1,1,5,1,5,2,0,42.10058,4563,1,
+2026-10-09T11:40:38.175523+00:00,inventory_stapler,synthetic_inventory,llm,qwen2.5:1.5b,1,no_verification,wrong_tool,not_applicable,0,0,0,0,0,1,1,1,0,1,4.567631,617,1,tool must be a string and args an object
+2026-10-09T11:40:42.166207+00:00,inventory_stapler,synthetic_inventory,llm,qwen2.5:1.5b,1,naive_retry,wrong_tool,not_applicable,2,0,0,0,0,1,1,3,2,1,3.883965,617,1,tool must be a string and args an object
+2026-10-09T11:41:28.350475+00:00,inventory_stapler,synthetic_inventory,llm,qwen2.5:1.5b,1,closed_loop,wrong_tool,schema_diff,2,1,3,1,1,5,1,5,2,0,46.078622,4584,1,
+2026-10-09T11:41:54.833147+00:00,inventory_folder,synthetic_inventory,llm,qwen2.5:1.5b,1,no_verification,none,not_applicable,0,1,3,0,0,3,0,3,0,0,26.378085,1925,1,
+2026-10-09T11:42:12.236603+00:00,inventory_folder,synthetic_inventory,llm,qwen2.5:1.5b,1,naive_retry,none,not_applicable,2,1,3,0,0,3,0,3,0,0,17.29334,1925,1,
+2026-10-09T11:42:29.407432+00:00,inventory_folder,synthetic_inventory,llm,qwen2.5:1.5b,1,closed_loop,none,schema_diff,2,1,3,0,0,3,0,3,0,0,17.072336,1925,1,
+2026-10-09T11:42:45.042365+00:00,inventory_folder,synthetic_inventory,llm,qwen2.5:1.5b,1,no_verification,malformed_json,not_applicable,0,0,1,1,0,2,0,2,0,1,15.523015,1227,1,Expecting value: line 1 column 34 (char 33)
+2026-10-09T11:43:00.387520+00:00,inventory_folder,synthetic_inventory,llm,qwen2.5:1.5b,1,naive_retry,malformed_json,not_applicable,2,0,1,1,0,2,0,4,2,1,15.251203,1227,1,Expecting value: line 1 column 34 (char 33)
+2026-10-09T11:43:42.323066+00:00,inventory_folder,synthetic_inventory,llm,qwen2.5:1.5b,1,closed_loop,malformed_json,schema_diff,2,1,3,1,1,5,1,5,2,0,40.718342,4079,1,
+2026-10-09T11:43:57.787624+00:00,inventory_folder,synthetic_inventory,llm,qwen2.5:1.5b,1,no_verification,type_mismatch,not_applicable,0,0,1,1,0,2,0,2,0,1,15.365664,1227,1,"Error executing tool reserve_stock: 1 validation error for reserve_stockArguments
+quantity
+  Input should be a valid integer, unable to parse string as an integer [type=int_parsing, input_value='NOT_A_NUMBER', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.14/v/int_parsing"
+2026-10-09T11:44:14.538427+00:00,inventory_folder,synthetic_inventory,llm,qwen2.5:1.5b,1,naive_retry,type_mismatch,not_applicable,2,0,1,1,0,2,0,4,2,1,16.64697,1227,1,"Error executing tool reserve_stock: 1 validation error for reserve_stockArguments
+quantity
+  Input should be a valid integer, unable to parse string as an integer [type=int_parsing, input_value='NOT_A_NUMBER', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.14/v/int_parsing"
+2026-10-09T11:45:25.822865+00:00,inventory_folder,synthetic_inventory,llm,qwen2.5:1.5b,1,closed_loop,type_mismatch,schema_diff,2,0,2,1,1,6,3,6,3,1,71.16996,5538,1,"Selected reserve_stock, but the current task requires check_stock"
+2026-10-09T11:45:41.679350+00:00,inventory_folder,synthetic_inventory,llm,qwen2.5:1.5b,1,no_verification,stale_schema,not_applicable,0,0,1,1,0,2,0,2,0,1,15.75691,1227,1,"Error executing tool reserve_stock: 1 validation error for reserve_stockArguments
+quantity
+  Field required [type=missing, input_value={'sku': 'FOLDER', 'quantity_old': 4}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.14/v/missing"
+2026-10-09T11:45:56.950458+00:00,inventory_folder,synthetic_inventory,llm,qwen2.5:1.5b,1,naive_retry,stale_schema,not_applicable,2,0,1,1,0,2,0,4,2,1,15.182251,1227,1,"Error executing tool reserve_stock: 1 validation error for reserve_stockArguments
+quantity
+  Field required [type=missing, input_value={'sku': 'FOLDER', 'quantity_old': 4}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.14/v/missing"
+2026-10-09T11:46:24.343536+00:00,inventory_folder,synthetic_inventory,llm,qwen2.5:1.5b,1,closed_loop,stale_schema,schema_diff,2,1,3,1,1,4,0,4,1,0,27.281198,2852,1,
+2026-10-09T11:46:39.769635+00:00,inventory_folder,synthetic_inventory,llm,qwen2.5:1.5b,1,no_verification,transient_api,not_applicable,0,0,1,1,0,2,0,2,0,1,15.325924,1227,1,Injected temporary upstream HTTP 503 failure
+2026-10-09T11:46:58.503538+00:00,inventory_folder,synthetic_inventory,llm,qwen2.5:1.5b,1,naive_retry,transient_api,not_applicable,2,1,3,1,1,3,0,4,1,0,18.632919,1925,1,
+2026-10-09T11:47:25.158276+00:00,inventory_folder,synthetic_inventory,llm,qwen2.5:1.5b,1,closed_loop,transient_api,schema_diff,2,1,3,1,1,4,0,4,1,0,26.553461,2799,1,
+2026-10-09T11:47:40.570124+00:00,inventory_folder,synthetic_inventory,llm,qwen2.5:1.5b,1,no_verification,transient_timeout,not_applicable,0,0,1,1,0,2,0,2,0,1,15.30906,1227,1,Injected upstream network timeout
+2026-10-09T11:47:59.522420+00:00,inventory_folder,synthetic_inventory,llm,qwen2.5:1.5b,1,naive_retry,transient_timeout,not_applicable,2,1,3,1,1,3,0,4,1,0,18.852135,1925,1,
+2026-10-09T11:48:25.852858+00:00,inventory_folder,synthetic_inventory,llm,qwen2.5:1.5b,1,closed_loop,transient_timeout,schema_diff,2,1,3,1,1,4,0,4,1,0,26.22251,2775,1,
+2026-10-09T11:48:41.404685+00:00,inventory_folder,synthetic_inventory,llm,qwen2.5:1.5b,1,no_verification,transient_rate_limit,not_applicable,0,0,1,1,0,2,0,2,0,1,15.455234,1227,1,Injected upstream API rate limit
+2026-10-09T11:49:00.603603+00:00,inventory_folder,synthetic_inventory,llm,qwen2.5:1.5b,1,naive_retry,transient_rate_limit,not_applicable,2,1,3,1,1,3,0,4,1,0,19.092351,1925,1,
+2026-10-09T11:49:33.742401+00:00,inventory_folder,synthetic_inventory,llm,qwen2.5:1.5b,1,closed_loop,transient_rate_limit,schema_diff,2,1,3,1,1,5,1,5,2,0,33.038202,3771,1,
+2026-10-09T11:49:49.182325+00:00,inventory_folder,synthetic_inventory,llm,qwen2.5:1.5b,1,no_verification,wrong_tool,not_applicable,0,0,1,1,0,2,0,2,0,1,15.335101,1227,1,Unsafe to retry state-changing operation without compensating rollback; escalation required
+2026-10-09T11:50:05.031883+00:00,inventory_folder,synthetic_inventory,llm,qwen2.5:1.5b,1,naive_retry,wrong_tool,not_applicable,2,0,1,1,0,2,0,2,0,1,15.742457,1227,1,Unsafe to retry state-changing operation without compensating rollback; escalation required
+2026-10-09T11:50:50.498394+00:00,inventory_folder,synthetic_inventory,llm,qwen2.5:1.5b,1,closed_loop,wrong_tool,schema_diff,2,0,2,1,1,6,3,6,3,1,45.370036,4798,1,"Selected reserve_stock, but the current task requires check_stock"
+2026-10-09T11:51:15.813498+00:00,inventory_charger,synthetic_inventory,llm,qwen2.5:1.5b,1,no_verification,none,not_applicable,0,1,3,0,0,3,0,3,0,0,25.206385,1924,1,
+2026-10-09T11:51:24.732503+00:00,inventory_charger,synthetic_inventory,llm,qwen2.5:1.5b,1,naive_retry,none,not_applicable,2,0,0,0,0,1,1,3,2,1,8.81641,613,1,tool must be a string and args an object
+2026-10-09T11:52:04.080960+00:00,inventory_charger,synthetic_inventory,llm,qwen2.5:1.5b,1,closed_loop,none,schema_diff,2,1,3,0,0,4,1,4,1,0,39.24627,3394,1,
+2026-10-09T11:52:08.343557+00:00,inventory_charger,synthetic_inventory,llm,qwen2.5:1.5b,1,no_verification,malformed_json,not_applicable,0,0,0,0,0,1,1,1,0,1,4.166605,613,1,tool must be a string and args an object
+2026-10-09T11:52:12.082710+00:00,inventory_charger,synthetic_inventory,llm,qwen2.5:1.5b,1,naive_retry,malformed_json,not_applicable,2,0,0,0,0,1,1,3,2,1,3.169936,608,1,Extra data: line 2 column 1 (char 57)
+2026-10-09T11:52:51.574418+00:00,inventory_charger,synthetic_inventory,llm,qwen2.5:1.5b,1,closed_loop,malformed_json,schema_diff,2,1,3,1,1,5,1,5,2,0,39.049338,4384,1,
+2026-10-09T11:52:55.807213+00:00,inventory_charger,synthetic_inventory,llm,qwen2.5:1.5b,1,no_verification,type_mismatch,not_applicable,0,0,0,0,0,1,1,1,0,1,4.128311,613,1,tool must be a string and args an object
+2026-10-09T11:52:59.047949+00:00,inventory_charger,synthetic_inventory,llm,qwen2.5:1.5b,1,naive_retry,type_mismatch,not_applicable,2,0,0,0,0,1,1,3,2,1,3.137466,608,1,Extra data: line 2 column 1 (char 57)
+2026-10-09T11:53:27.220474+00:00,inventory_charger,synthetic_inventory,llm,qwen2.5:1.5b,1,closed_loop,type_mismatch,schema_diff,2,1,3,1,1,5,1,5,2,0,28.069504,4379,1,
+2026-10-09T11:53:31.448581+00:00,inventory_charger,synthetic_inventory,llm,qwen2.5:1.5b,1,no_verification,stale_schema,not_applicable,0,0,0,0,0,1,1,1,0,1,4.129922,613,1,tool must be a string and args an object
+2026-10-09T11:53:34.697081+00:00,inventory_charger,synthetic_inventory,llm,qwen2.5:1.5b,1,naive_retry,stale_schema,not_applicable,2,0,0,0,0,1,1,3,2,1,3.137777,608,1,Extra data: line 2 column 1 (char 57)
+2026-10-09T11:54:02.004303+00:00,inventory_charger,synthetic_inventory,llm,qwen2.5:1.5b,1,closed_loop,stale_schema,schema_diff,2,1,3,1,1,5,1,5,2,0,27.202406,4364,1,
+2026-10-09T11:54:06.248467+00:00,inventory_charger,synthetic_inventory,llm,qwen2.5:1.5b,1,no_verification,transient_api,not_applicable,0,0,0,0,0,1,1,1,0,1,4.144214,613,1,tool must be a string and args an object
+2026-10-09T11:54:09.534853+00:00,inventory_charger,synthetic_inventory,llm,qwen2.5:1.5b,1,naive_retry,transient_api,not_applicable,2,0,0,0,0,1,1,3,2,1,3.170408,608,1,Extra data: line 2 column 1 (char 57)
+2026-10-09T11:54:35.895771+00:00,inventory_charger,synthetic_inventory,llm,qwen2.5:1.5b,1,closed_loop,transient_api,schema_diff,2,1,3,1,1,5,1,5,2,0,25.939784,4311,1,
+2026-10-09T11:54:40.140747+00:00,inventory_charger,synthetic_inventory,llm,qwen2.5:1.5b,1,no_verification,transient_timeout,not_applicable,0,0,0,0,0,1,1,1,0,1,4.132862,613,1,tool must be a string and args an object
+2026-10-09T11:54:43.383410+00:00,inventory_charger,synthetic_inventory,llm,qwen2.5:1.5b,1,naive_retry,transient_timeout,not_applicable,2,0,0,0,0,1,1,3,2,1,3.138819,608,1,Extra data: line 2 column 1 (char 57)
+2026-10-09T11:55:08.654980+00:00,inventory_charger,synthetic_inventory,llm,qwen2.5:1.5b,1,closed_loop,transient_timeout,schema_diff,2,1,3,1,1,5,1,5,2,0,25.16029,4287,1,
+2026-10-09T11:55:12.898428+00:00,inventory_charger,synthetic_inventory,llm,qwen2.5:1.5b,1,no_verification,transient_rate_limit,not_applicable,0,0,0,0,0,1,1,1,0,1,4.137523,613,1,tool must be a string and args an object
+2026-10-09T11:55:16.137828+00:00,inventory_charger,synthetic_inventory,llm,qwen2.5:1.5b,1,naive_retry,transient_rate_limit,not_applicable,2,0,0,0,0,1,1,3,2,1,3.134233,608,1,Extra data: line 2 column 1 (char 57)
+2026-10-09T11:55:57.375170+00:00,inventory_charger,synthetic_inventory,llm,qwen2.5:1.5b,1,closed_loop,transient_rate_limit,schema_diff,2,1,3,1,1,6,2,6,3,0,40.787468,5415,1,
+2026-10-09T11:56:01.635923+00:00,inventory_charger,synthetic_inventory,llm,qwen2.5:1.5b,1,no_verification,wrong_tool,not_applicable,0,0,0,0,0,1,1,1,0,1,4.154769,613,1,tool must be a string and args an object
+2026-10-09T11:56:04.899182+00:00,inventory_charger,synthetic_inventory,llm,qwen2.5:1.5b,1,naive_retry,wrong_tool,not_applicable,2,0,0,0,0,1,1,3,2,1,3.15729,608,1,Extra data: line 2 column 1 (char 57)
+2026-10-09T11:57:00.367697+00:00,inventory_charger,synthetic_inventory,llm,qwen2.5:1.5b,1,closed_loop,wrong_tool,schema_diff,2,0,2,1,1,7,4,7,4,1,55.368016,6309,1,"Selected reserve_stock, but the current task requires check_stock"
+2026-10-09T11:57:26.097505+00:00,inventory_webcam,synthetic_inventory,llm,qwen2.5:1.5b,1,no_verification,none,not_applicable,0,1,3,0,0,3,0,3,0,0,25.615374,1940,1,
+2026-10-09T11:57:46.405767+00:00,inventory_webcam,synthetic_inventory,llm,qwen2.5:1.5b,1,naive_retry,none,not_applicable,2,1,3,0,0,3,0,3,0,0,20.195867,1941,1,
+2026-10-09T11:58:06.382607+00:00,inventory_webcam,synthetic_inventory,llm,qwen2.5:1.5b,1,closed_loop,none,schema_diff,2,1,3,0,0,3,0,3,0,0,19.861459,1940,1,
+2026-10-09T11:58:23.533791+00:00,inventory_webcam,synthetic_inventory,llm,qwen2.5:1.5b,1,no_verification,malformed_json,not_applicable,0,0,1,1,0,2,0,2,0,1,17.035204,1235,1,Expecting value: line 1 column 34 (char 33)
+2026-10-09T11:58:40.283584+00:00,inventory_webcam,synthetic_inventory,llm,qwen2.5:1.5b,1,naive_retry,malformed_json,not_applicable,2,0,1,1,0,2,0,4,2,1,16.640202,1235,1,Expecting value: line 1 column 34 (char 33)
+2026-10-09T11:59:36.918171+00:00,inventory_webcam,synthetic_inventory,llm,qwen2.5:1.5b,1,closed_loop,malformed_json,schema_diff,2,0,2,1,1,6,3,6,3,1,56.523802,5229,1,"Selected reserve_stock, but the current task requires check_stock"
+2026-10-09T11:59:52.875998+00:00,inventory_webcam,synthetic_inventory,llm,qwen2.5:1.5b,1,no_verification,type_mismatch,not_applicable,0,0,1,1,0,2,0,2,0,1,15.815143,1235,1,"Error executing tool reserve_stock: 1 validation error for reserve_stockArguments
+quantity
+  Input should be a valid integer, unable to parse string as an integer [type=int_parsing, input_value='NOT_A_NUMBER', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.14/v/int_parsing"
+2026-10-09T12:00:08.649258+00:00,inventory_webcam,synthetic_inventory,llm,qwen2.5:1.5b,1,naive_retry,type_mismatch,not_applicable,2,0,1,1,0,2,0,4,2,1,15.658786,1235,1,"Error executing tool reserve_stock: 1 validation error for reserve_stockArguments
+quantity
+  Input should be a valid integer, unable to parse string as an integer [type=int_parsing, input_value='NOT_A_NUMBER', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.14/v/int_parsing"
+2026-10-09T12:00:37.326130+00:00,inventory_webcam,synthetic_inventory,llm,qwen2.5:1.5b,1,closed_loop,type_mismatch,schema_diff,2,1,3,1,1,4,0,4,1,0,28.573485,2893,1,
+2026-10-09T12:00:52.871219+00:00,inventory_webcam,synthetic_inventory,llm,qwen2.5:1.5b,1,no_verification,stale_schema,not_applicable,0,0,1,1,0,2,0,2,0,1,15.43034,1235,1,"Error executing tool reserve_stock: 1 validation error for reserve_stockArguments
+quantity
+  Field required [type=missing, input_value={'sku': 'WEBCAM', 'quantity_old': 1}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.14/v/missing"
+2026-10-09T12:01:08.534874+00:00,inventory_webcam,synthetic_inventory,llm,qwen2.5:1.5b,1,naive_retry,stale_schema,not_applicable,2,0,1,1,0,2,0,4,2,1,15.556271,1235,1,"Error executing tool reserve_stock: 1 validation error for reserve_stockArguments
+quantity
+  Field required [type=missing, input_value={'sku': 'WEBCAM', 'quantity_old': 1}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.14/v/missing"
+2026-10-09T12:01:36.867880+00:00,inventory_webcam,synthetic_inventory,llm,qwen2.5:1.5b,1,closed_loop,stale_schema,schema_diff,2,1,3,1,1,4,0,4,1,0,28.221925,2878,1,
+2026-10-09T12:01:52.556546+00:00,inventory_webcam,synthetic_inventory,llm,qwen2.5:1.5b,1,no_verification,transient_api,not_applicable,0,0,1,1,0,2,0,2,0,1,15.572479,1235,1,Injected temporary upstream HTTP 503 failure
+2026-10-09T12:02:12.289815+00:00,inventory_webcam,synthetic_inventory,llm,qwen2.5:1.5b,1,naive_retry,transient_api,not_applicable,2,1,3,1,1,3,0,4,1,0,19.627542,1940,1,
+2026-10-09T12:02:41.488914+00:00,inventory_webcam,synthetic_inventory,llm,qwen2.5:1.5b,1,closed_loop,transient_api,schema_diff,2,1,3,1,1,4,0,4,1,0,29.074299,2821,1,
+2026-10-09T12:02:58.244567+00:00,inventory_webcam,synthetic_inventory,llm,qwen2.5:1.5b,1,no_verification,transient_timeout,not_applicable,0,0,1,1,0,2,0,2,0,1,16.644909,1235,1,Injected upstream network timeout
+2026-10-09T12:03:18.307035+00:00,inventory_webcam,synthetic_inventory,llm,qwen2.5:1.5b,1,naive_retry,transient_timeout,not_applicable,2,1,3,1,1,3,0,4,1,0,19.948181,1941,1,
+2026-10-09T12:03:45.425576+00:00,inventory_webcam,synthetic_inventory,llm,qwen2.5:1.5b,1,closed_loop,transient_timeout,schema_diff,2,1,3,1,1,4,0,4,1,0,27.008225,2799,1,
+2026-10-09T12:04:02.206152+00:00,inventory_webcam,synthetic_inventory,llm,qwen2.5:1.5b,1,no_verification,transient_rate_limit,not_applicable,0,0,1,1,0,2,0,2,0,1,16.666965,1235,1,Injected upstream API rate limit
+2026-10-09T12:04:22.148733+00:00,inventory_webcam,synthetic_inventory,llm,qwen2.5:1.5b,1,naive_retry,transient_rate_limit,not_applicable,2,1,3,1,1,3,0,4,1,0,19.808323,1940,1,
+2026-10-09T12:04:48.977446+00:00,inventory_webcam,synthetic_inventory,llm,qwen2.5:1.5b,1,closed_loop,transient_rate_limit,schema_diff,2,1,3,1,1,4,0,4,1,0,26.717461,2809,1,
+2026-10-09T12:05:04.565405+00:00,inventory_webcam,synthetic_inventory,llm,qwen2.5:1.5b,1,no_verification,wrong_tool,not_applicable,0,0,1,1,0,2,0,2,0,1,15.456969,1235,1,Unsafe to retry state-changing operation without compensating rollback; escalation required
+2026-10-09T12:05:20.207488+00:00,inventory_webcam,synthetic_inventory,llm,qwen2.5:1.5b,1,naive_retry,wrong_tool,not_applicable,2,0,1,1,0,2,0,2,0,1,15.530523,1235,1,Unsafe to retry state-changing operation without compensating rollback; escalation required
+2026-10-09T12:06:06.744914+00:00,inventory_webcam,synthetic_inventory,llm,qwen2.5:1.5b,1,closed_loop,wrong_tool,schema_diff,2,0,2,1,1,6,3,6,3,1,46.430367,4839,1,"Selected reserve_stock, but the current task requires check_stock"
+2026-10-09T12:06:31.670991+00:00,inventory_headset,synthetic_inventory,llm,qwen2.5:1.5b,1,no_verification,none,not_applicable,0,1,3,0,0,3,0,3,0,0,24.797097,1922,1,
+2026-10-09T12:06:41.707440+00:00,inventory_headset,synthetic_inventory,llm,qwen2.5:1.5b,1,naive_retry,none,not_applicable,2,0,0,0,0,1,1,3,2,1,9.471003,613,1,tool must be a string and args an object
+2026-10-09T12:07:20.229957+00:00,inventory_headset,synthetic_inventory,llm,qwen2.5:1.5b,1,closed_loop,none,schema_diff,2,1,3,0,0,4,1,4,1,0,38.405922,3398,1,
+2026-10-09T12:07:30.656869+00:00,inventory_headset,synthetic_inventory,llm,qwen2.5:1.5b,1,no_verification,malformed_json,not_applicable,0,0,1,1,0,2,0,2,0,1,10.314846,1224,1,Expecting value: line 1 column 34 (char 33)
+2026-10-09T12:07:45.638502+00:00,inventory_headset,synthetic_inventory,llm,qwen2.5:1.5b,1,naive_retry,malformed_json,not_applicable,2,0,1,1,0,2,0,4,2,1,14.871071,1224,1,Expecting value: line 1 column 34 (char 33)
+2026-10-09T12:08:15.445870+00:00,inventory_headset,synthetic_inventory,llm,qwen2.5:1.5b,1,closed_loop,malformed_json,schema_diff,2,1,3,1,1,4,0,4,1,0,29.700958,2870,1,
+2026-10-09T12:08:25.096402+00:00,inventory_headset,synthetic_inventory,llm,qwen2.5:1.5b,1,no_verification,type_mismatch,not_applicable,0,0,0,0,0,1,1,1,0,1,9.525366,613,1,tool must be a string and args an object
+2026-10-09T12:08:28.674010+00:00,inventory_headset,synthetic_inventory,llm,qwen2.5:1.5b,1,naive_retry,type_mismatch,not_applicable,2,0,0,0,0,1,1,3,2,1,3.46607,613,1,tool must be a string and args an object
+2026-10-09T12:09:11.223599+00:00,inventory_headset,synthetic_inventory,llm,qwen2.5:1.5b,1,closed_loop,type_mismatch,schema_diff,2,1,3,1,1,5,1,5,2,0,42.440824,4591,1,
+2026-10-09T12:09:21.677495+00:00,inventory_headset,synthetic_inventory,llm,qwen2.5:1.5b,1,no_verification,stale_schema,not_applicable,0,0,1,1,0,2,0,2,0,1,10.333544,1224,1,"Error executing tool reserve_stock: 1 validation error for reserve_stockArguments
+quantity
+  Field required [type=missing, input_value={'sku': 'HEADSET', 'quantity_old': 2}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.14/v/missing"
+2026-10-09T12:09:36.646139+00:00,inventory_headset,synthetic_inventory,llm,qwen2.5:1.5b,1,naive_retry,stale_schema,not_applicable,2,0,1,1,0,2,0,4,2,1,14.855986,1224,1,"Error executing tool reserve_stock: 1 validation error for reserve_stockArguments
+quantity
+  Field required [type=missing, input_value={'sku': 'HEADSET', 'quantity_old': 2}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.14/v/missing"
+2026-10-09T12:10:04.926900+00:00,inventory_headset,synthetic_inventory,llm,qwen2.5:1.5b,1,closed_loop,stale_schema,schema_diff,2,1,3,1,1,4,0,4,1,0,28.166265,2849,1,
+2026-10-09T12:10:13.780458+00:00,inventory_headset,synthetic_inventory,llm,qwen2.5:1.5b,1,no_verification,transient_api,not_applicable,0,0,0,0,0,1,1,1,0,1,8.739193,613,1,tool must be a string and args an object
+2026-10-09T12:10:17.367648+00:00,inventory_headset,synthetic_inventory,llm,qwen2.5:1.5b,1,naive_retry,transient_api,not_applicable,2,0,0,0,0,1,1,3,2,1,3.474923,613,1,tool must be a string and args an object
+2026-10-09T12:10:58.525309+00:00,inventory_headset,synthetic_inventory,llm,qwen2.5:1.5b,1,closed_loop,transient_api,schema_diff,2,1,3,1,1,5,1,5,2,0,41.044226,4508,1,
+2026-10-09T12:11:08.982826+00:00,inventory_headset,synthetic_inventory,llm,qwen2.5:1.5b,1,no_verification,transient_timeout,not_applicable,0,0,1,1,0,2,0,2,0,1,10.343138,1224,1,Injected upstream network timeout
+2026-10-09T12:11:33.183567+00:00,inventory_headset,synthetic_inventory,llm,qwen2.5:1.5b,1,naive_retry,transient_timeout,not_applicable,2,1,3,1,1,3,0,4,1,0,24.08627,1922,1,
+2026-10-09T12:12:18.933376+00:00,inventory_headset,synthetic_inventory,llm,qwen2.5:1.5b,1,closed_loop,transient_timeout,schema_diff,2,1,3,1,1,5,1,5,2,0,45.635214,4509,1,
+2026-10-09T12:12:29.404729+00:00,inventory_headset,synthetic_inventory,llm,qwen2.5:1.5b,1,no_verification,transient_rate_limit,not_applicable,0,0,1,1,0,2,0,2,0,1,10.361078,1224,1,Injected upstream API rate limit
+2026-10-09T12:12:54.303369+00:00,inventory_headset,synthetic_inventory,llm,qwen2.5:1.5b,1,naive_retry,transient_rate_limit,not_applicable,2,1,3,1,1,3,0,4,1,0,24.776717,1922,1,
+2026-10-09T12:13:41.360567+00:00,inventory_headset,synthetic_inventory,llm,qwen2.5:1.5b,1,closed_loop,transient_rate_limit,schema_diff,2,1,3,1,1,5,1,5,2,0,46.943431,4539,1,
+2026-10-09T12:13:51.802983+00:00,inventory_headset,synthetic_inventory,llm,qwen2.5:1.5b,1,no_verification,wrong_tool,not_applicable,0,0,1,1,0,2,0,2,0,1,10.328023,1224,1,Unsafe to retry state-changing operation without compensating rollback; escalation required
+2026-10-09T12:14:07.148084+00:00,inventory_headset,synthetic_inventory,llm,qwen2.5:1.5b,1,naive_retry,wrong_tool,not_applicable,2,0,1,1,0,2,0,2,0,1,15.22865,1224,1,Unsafe to retry state-changing operation without compensating rollback; escalation required
+2026-10-09T12:14:53.504019+00:00,inventory_headset,synthetic_inventory,llm,qwen2.5:1.5b,1,closed_loop,wrong_tool,schema_diff,2,0,2,1,1,6,3,6,3,1,46.23655,4795,1,"Selected reserve_stock, but the current task requires check_stock"
+2026-10-09T12:15:02.693504+00:00,inventory_router,synthetic_inventory,llm,qwen2.5:1.5b,1,no_verification,none,not_applicable,0,0,0,0,0,1,1,1,0,1,9.071688,608,1,Extra data: line 2 column 1 (char 56)
+2026-10-09T12:15:06.003713+00:00,inventory_router,synthetic_inventory,llm,qwen2.5:1.5b,1,naive_retry,none,not_applicable,2,0,0,0,0,1,1,3,2,1,3.193106,608,1,Extra data: line 2 column 1 (char 56)
+2026-10-09T12:15:57.961645+00:00,inventory_router,synthetic_inventory,llm,qwen2.5:1.5b,1,closed_loop,none,schema_diff,2,1,3,0,0,5,2,5,2,0,51.847696,4461,1,
+2026-10-09T12:16:02.799085+00:00,inventory_router,synthetic_inventory,llm,qwen2.5:1.5b,1,no_verification,malformed_json,not_applicable,0,0,0,0,0,1,1,1,0,1,4.679678,613,1,tool must be a string and args an object
+2026-10-09T12:16:06.117219+00:00,inventory_router,synthetic_inventory,llm,qwen2.5:1.5b,1,naive_retry,malformed_json,not_applicable,2,0,0,0,0,1,1,3,2,1,3.201125,608,1,Extra data: line 2 column 1 (char 56)
+2026-10-09T12:17:04.930386+00:00,inventory_router,synthetic_inventory,llm,qwen2.5:1.5b,1,closed_loop,malformed_json,schema_diff,2,0,2,1,1,7,4,7,4,1,58.698722,6687,1,"Selected reserve_stock, but the current task requires check_stock"
+2026-10-09T12:17:09.180952+00:00,inventory_router,synthetic_inventory,llm,qwen2.5:1.5b,1,no_verification,type_mismatch,not_applicable,0,0,0,0,0,1,1,1,0,1,4.129109,613,1,tool must be a string and args an object
+2026-10-09T12:17:12.399177+00:00,inventory_router,synthetic_inventory,llm,qwen2.5:1.5b,1,naive_retry,type_mismatch,not_applicable,2,0,0,0,0,1,1,3,2,1,3.103318,608,1,Extra data: line 2 column 1 (char 56)
+2026-10-09T12:18:17.082412+00:00,inventory_router,synthetic_inventory,llm,qwen2.5:1.5b,1,closed_loop,type_mismatch,schema_diff,2,0,2,1,1,7,4,7,4,1,64.568239,6682,1,"Selected reserve_stock, but the current task requires check_stock"
+2026-10-09T12:18:21.347185+00:00,inventory_router,synthetic_inventory,llm,qwen2.5:1.5b,1,no_verification,stale_schema,not_applicable,0,0,0,0,0,1,1,1,0,1,4.152972,613,1,tool must be a string and args an object
+2026-10-09T12:18:24.593682+00:00,inventory_router,synthetic_inventory,llm,qwen2.5:1.5b,1,naive_retry,stale_schema,not_applicable,2,0,0,0,0,1,1,3,2,1,3.125387,608,1,Extra data: line 2 column 1 (char 56)
+2026-10-09T12:19:28.561489+00:00,inventory_router,synthetic_inventory,llm,qwen2.5:1.5b,1,closed_loop,stale_schema,schema_diff,2,0,2,1,1,7,4,7,4,1,63.857707,6655,1,"Selected reserve_stock, but the current task requires check_stock"
+2026-10-09T12:19:32.785633+00:00,inventory_router,synthetic_inventory,llm,qwen2.5:1.5b,1,no_verification,transient_api,not_applicable,0,0,0,0,0,1,1,1,0,1,4.101266,613,1,tool must be a string and args an object
+2026-10-09T12:19:36.219929+00:00,inventory_router,synthetic_inventory,llm,qwen2.5:1.5b,1,naive_retry,transient_api,not_applicable,2,0,0,0,0,1,1,3,2,1,3.326992,608,1,Extra data: line 2 column 1 (char 56)
+2026-10-09T12:20:08.988369+00:00,inventory_router,synthetic_inventory,llm,qwen2.5:1.5b,1,closed_loop,transient_api,schema_diff,2,1,3,1,1,5,1,5,2,0,32.638199,4307,1,
+2026-10-09T12:20:13.305406+00:00,inventory_router,synthetic_inventory,llm,qwen2.5:1.5b,1,no_verification,transient_timeout,not_applicable,0,0,0,0,0,1,1,1,0,1,4.200276,613,1,tool must be a string and args an object
+2026-10-09T12:20:17.098248+00:00,inventory_router,synthetic_inventory,llm,qwen2.5:1.5b,1,naive_retry,transient_timeout,not_applicable,2,0,0,0,0,1,1,3,2,1,3.670493,608,1,Extra data: line 2 column 1 (char 56)
+2026-10-09T12:21:13.903754+00:00,inventory_router,synthetic_inventory,llm,qwen2.5:1.5b,1,closed_loop,transient_timeout,schema_diff,2,0,2,1,1,7,4,7,4,1,56.687788,6526,1,"Selected reserve_stock, but the current task requires check_stock"
+2026-10-09T12:21:18.749014+00:00,inventory_router,synthetic_inventory,llm,qwen2.5:1.5b,1,no_verification,transient_rate_limit,not_applicable,0,0,0,0,0,1,1,1,0,1,4.350497,613,1,tool must be a string and args an object
+2026-10-09T12:21:22.190893+00:00,inventory_router,synthetic_inventory,llm,qwen2.5:1.5b,1,naive_retry,transient_rate_limit,not_applicable,2,0,0,0,0,1,1,3,2,1,3.31352,608,1,Extra data: line 2 column 1 (char 56)
+2026-10-09T12:21:56.129056+00:00,inventory_router,synthetic_inventory,llm,qwen2.5:1.5b,1,closed_loop,transient_rate_limit,schema_diff,2,1,3,1,1,5,1,5,2,0,33.808707,4295,1,
+2026-10-09T12:22:00.625549+00:00,inventory_router,synthetic_inventory,llm,qwen2.5:1.5b,1,no_verification,wrong_tool,not_applicable,0,0,0,0,0,1,1,1,0,1,4.365544,613,1,tool must be a string and args an object
+2026-10-09T12:22:04.461270+00:00,inventory_router,synthetic_inventory,llm,qwen2.5:1.5b,1,naive_retry,wrong_tool,not_applicable,2,0,0,0,0,1,1,3,2,1,3.709756,608,1,Extra data: line 2 column 1 (char 56)
+2026-10-09T12:22:54.754160+00:00,inventory_router,synthetic_inventory,llm,qwen2.5:1.5b,1,closed_loop,wrong_tool,schema_diff,2,0,2,1,1,7,4,7,4,1,50.162412,6302,1,"Selected reserve_stock, but the current task requires check_stock"
+2026-10-09T12:23:04.708303+00:00,inventory_tablet,synthetic_inventory,llm,qwen2.5:1.5b,1,no_verification,none,not_applicable,0,0,0,0,0,1,1,1,0,1,9.844257,623,1,Extra data: line 2 column 1 (char 56)
+2026-10-09T12:23:08.385443+00:00,inventory_tablet,synthetic_inventory,llm,qwen2.5:1.5b,1,naive_retry,none,not_applicable,2,0,0,0,0,1,1,3,2,1,3.551426,613,1,tool must be a string and args an object
+2026-10-09T12:23:51.725373+00:00,inventory_tablet,synthetic_inventory,llm,qwen2.5:1.5b,1,closed_loop,none,schema_diff,2,1,3,0,0,4,1,4,1,0,43.2317,3414,1,
+2026-10-09T12:23:55.595875+00:00,inventory_tablet,synthetic_inventory,llm,qwen2.5:1.5b,1,no_verification,malformed_json,not_applicable,0,0,0,0,0,1,1,1,0,1,3.74786,608,1,Extra data: line 2 column 1 (char 56)
+2026-10-09T12:23:58.859453+00:00,inventory_tablet,synthetic_inventory,llm,qwen2.5:1.5b,1,naive_retry,malformed_json,not_applicable,2,0,0,0,0,1,1,3,2,1,3.145937,608,1,Extra data: line 2 column 1 (char 56)
+2026-10-09T12:24:38.469462+00:00,inventory_tablet,synthetic_inventory,llm,qwen2.5:1.5b,1,closed_loop,malformed_json,schema_diff,2,1,3,1,1,5,1,5,2,0,39.490408,4380,1,
+2026-10-09T12:24:42.590302+00:00,inventory_tablet,synthetic_inventory,llm,qwen2.5:1.5b,1,no_verification,type_mismatch,not_applicable,0,0,0,0,0,1,1,1,0,1,3.98785,608,1,Extra data: line 2 column 1 (char 56)
+2026-10-09T12:24:46.043443+00:00,inventory_tablet,synthetic_inventory,llm,qwen2.5:1.5b,1,naive_retry,type_mismatch,not_applicable,2,0,0,0,0,1,1,3,2,1,3.321579,608,1,Extra data: line 2 column 1 (char 56)
+2026-10-09T12:25:15.889166+00:00,inventory_tablet,synthetic_inventory,llm,qwen2.5:1.5b,1,closed_loop,type_mismatch,schema_diff,2,1,3,1,1,5,1,5,2,0,29.714485,4375,1,
+2026-10-09T12:25:20.021112+00:00,inventory_tablet,synthetic_inventory,llm,qwen2.5:1.5b,1,no_verification,stale_schema,not_applicable,0,0,0,0,0,1,1,1,0,1,3.999529,608,1,Extra data: line 2 column 1 (char 56)
+2026-10-09T12:25:23.447998+00:00,inventory_tablet,synthetic_inventory,llm,qwen2.5:1.5b,1,naive_retry,stale_schema,not_applicable,2,0,0,0,0,1,1,3,2,1,3.295423,608,1,Extra data: line 2 column 1 (char 56)
+2026-10-09T12:26:06.406873+00:00,inventory_tablet,synthetic_inventory,llm,qwen2.5:1.5b,1,closed_loop,stale_schema,schema_diff,2,1,3,1,1,6,2,6,3,0,42.834914,5496,1,
+2026-10-09T12:26:10.319952+00:00,inventory_tablet,synthetic_inventory,llm,qwen2.5:1.5b,1,no_verification,transient_api,not_applicable,0,0,0,0,0,1,1,1,0,1,3.78321,608,1,Extra data: line 2 column 1 (char 56)
+2026-10-09T12:26:13.554817+00:00,inventory_tablet,synthetic_inventory,llm,qwen2.5:1.5b,1,naive_retry,transient_api,not_applicable,2,0,0,0,0,1,1,3,2,1,3.112246,608,1,Extra data: line 2 column 1 (char 56)
+2026-10-09T12:26:45.768794+00:00,inventory_tablet,synthetic_inventory,llm,qwen2.5:1.5b,1,closed_loop,transient_api,schema_diff,2,1,3,1,1,5,1,5,2,0,32.095748,4307,1,
+2026-10-09T12:26:50.095501+00:00,inventory_tablet,synthetic_inventory,llm,qwen2.5:1.5b,1,no_verification,transient_timeout,not_applicable,0,0,0,0,0,1,1,1,0,1,4.186752,608,1,Extra data: line 2 column 1 (char 56)
+2026-10-09T12:26:53.330964+00:00,inventory_tablet,synthetic_inventory,llm,qwen2.5:1.5b,1,naive_retry,transient_timeout,not_applicable,2,0,0,0,0,1,1,3,2,1,3.111886,608,1,Extra data: line 2 column 1 (char 56)
+2026-10-09T12:27:18.426547+00:00,inventory_tablet,synthetic_inventory,llm,qwen2.5:1.5b,1,closed_loop,transient_timeout,schema_diff,2,1,3,1,1,5,1,5,2,0,24.95743,4283,1,
+2026-10-09T12:27:22.302446+00:00,inventory_tablet,synthetic_inventory,llm,qwen2.5:1.5b,1,no_verification,transient_rate_limit,not_applicable,0,0,0,0,0,1,1,1,0,1,3.751085,608,1,Extra data: line 2 column 1 (char 56)
+2026-10-09T12:27:25.533739+00:00,inventory_tablet,synthetic_inventory,llm,qwen2.5:1.5b,1,naive_retry,transient_rate_limit,not_applicable,2,0,0,0,0,1,1,3,2,1,3.107693,608,1,Extra data: line 2 column 1 (char 56)
+2026-10-09T12:28:07.655163+00:00,inventory_tablet,synthetic_inventory,llm,qwen2.5:1.5b,1,closed_loop,transient_rate_limit,schema_diff,2,1,3,1,1,6,2,6,3,0,41.998624,5409,1,
+2026-10-09T12:28:11.713365+00:00,inventory_tablet,synthetic_inventory,llm,qwen2.5:1.5b,1,no_verification,wrong_tool,not_applicable,0,0,0,0,0,1,1,1,0,1,3.93018,608,1,Extra data: line 2 column 1 (char 56)
+2026-10-09T12:28:14.991112+00:00,inventory_tablet,synthetic_inventory,llm,qwen2.5:1.5b,1,naive_retry,wrong_tool,not_applicable,2,0,0,0,0,1,1,3,2,1,3.150567,608,1,Extra data: line 2 column 1 (char 56)
+2026-10-09T12:29:10.172481+00:00,inventory_tablet,synthetic_inventory,llm,qwen2.5:1.5b,1,closed_loop,wrong_tool,schema_diff,2,0,2,1,1,7,4,7,4,1,55.055154,6302,1,"Selected reserve_stock, but the current task requires check_stock"
+2026-10-09T12:29:19.328570+00:00,inventory_paper,synthetic_inventory,llm,qwen2.5:1.5b,1,no_verification,none,not_applicable,0,0,0,0,0,1,1,1,0,1,9.030922,610,1,Extra data: line 2 column 1 (char 55)
+2026-10-09T12:29:22.984241+00:00,inventory_paper,synthetic_inventory,llm,qwen2.5:1.5b,1,naive_retry,none,not_applicable,2,0,0,0,0,1,1,3,2,1,3.532263,615,1,tool must be a string and args an object
+2026-10-09T12:30:06.273601+00:00,inventory_paper,synthetic_inventory,llm,qwen2.5:1.5b,1,closed_loop,none,schema_diff,2,1,3,0,0,4,1,4,1,0,43.162667,3413,1,
+2026-10-09T12:30:10.263122+00:00,inventory_paper,synthetic_inventory,llm,qwen2.5:1.5b,1,no_verification,malformed_json,not_applicable,0,0,0,0,0,1,1,1,0,1,3.864148,610,1,Extra data: line 2 column 1 (char 55)
+2026-10-09T12:30:13.909022+00:00,inventory_paper,synthetic_inventory,llm,qwen2.5:1.5b,1,naive_retry,malformed_json,not_applicable,2,0,0,0,0,1,1,3,2,1,3.521448,615,1,tool must be a string and args an object
+2026-10-09T12:30:56.717454+00:00,inventory_paper,synthetic_inventory,llm,qwen2.5:1.5b,1,closed_loop,malformed_json,schema_diff,2,1,3,1,1,5,1,5,2,0,42.683292,4610,1,
+2026-10-09T12:31:00.662551+00:00,inventory_paper,synthetic_inventory,llm,qwen2.5:1.5b,1,no_verification,type_mismatch,not_applicable,0,0,0,0,0,1,1,1,0,1,3.81981,610,1,Extra data: line 2 column 1 (char 55)
+2026-10-09T12:31:04.312976+00:00,inventory_paper,synthetic_inventory,llm,qwen2.5:1.5b,1,naive_retry,type_mismatch,not_applicable,2,0,0,0,0,1,1,3,2,1,3.524917,615,1,tool must be a string and args an object
+2026-10-09T12:31:59.045830+00:00,inventory_paper,synthetic_inventory,llm,qwen2.5:1.5b,1,closed_loop,type_mismatch,schema_diff,2,1,3,1,1,6,2,6,3,0,54.613488,5901,1,
+2026-10-09T12:32:03.014758+00:00,inventory_paper,synthetic_inventory,llm,qwen2.5:1.5b,1,no_verification,stale_schema,not_applicable,0,0,0,0,0,1,1,1,0,1,3.835143,610,1,Extra data: line 2 column 1 (char 55)
+2026-10-09T12:32:06.679019+00:00,inventory_paper,synthetic_inventory,llm,qwen2.5:1.5b,1,naive_retry,stale_schema,not_applicable,2,0,0,0,0,1,1,3,2,1,3.538642,615,1,tool must be a string and args an object
+2026-10-09T12:33:09.908025+00:00,inventory_paper,synthetic_inventory,llm,qwen2.5:1.5b,1,closed_loop,stale_schema,schema_diff,2,1,3,1,1,6,2,6,3,0,63.102395,5737,1,
+2026-10-09T12:33:14.547864+00:00,inventory_paper,synthetic_inventory,llm,qwen2.5:1.5b,1,no_verification,transient_api,not_applicable,0,0,0,0,0,1,1,1,0,1,4.506021,610,1,Extra data: line 2 column 1 (char 55)
+2026-10-09T12:33:18.292767+00:00,inventory_paper,synthetic_inventory,llm,qwen2.5:1.5b,1,naive_retry,transient_api,not_applicable,2,0,0,0,0,1,1,3,2,1,3.594529,615,1,tool must be a string and args an object
+2026-10-09T12:34:29.904710+00:00,inventory_paper,synthetic_inventory,llm,qwen2.5:1.5b,1,closed_loop,transient_api,schema_diff,2,0,2,1,1,7,4,7,4,1,71.490005,6825,1,"Selected reserve_stock, but the current task requires check_stock"
+2026-10-09T12:34:33.872880+00:00,inventory_paper,synthetic_inventory,llm,qwen2.5:1.5b,1,no_verification,transient_timeout,not_applicable,0,0,0,0,0,1,1,1,0,1,3.836536,610,1,Extra data: line 2 column 1 (char 55)
+2026-10-09T12:34:37.872335+00:00,inventory_paper,synthetic_inventory,llm,qwen2.5:1.5b,1,naive_retry,transient_timeout,not_applicable,2,0,0,0,0,1,1,3,2,1,3.445195,615,1,tool must be a string and args an object
+2026-10-09T12:35:57.968083+00:00,inventory_paper,synthetic_inventory,llm,qwen2.5:1.5b,1,closed_loop,transient_timeout,schema_diff,2,0,2,1,1,7,4,7,4,1,79.981443,6949,1,Extra data: line 2 column 1 (char 55)
+2026-10-09T12:36:02.185893+00:00,inventory_paper,synthetic_inventory,llm,qwen2.5:1.5b,1,no_verification,transient_rate_limit,not_applicable,0,0,0,0,0,1,1,1,0,1,4.070071,610,1,Extra data: line 2 column 1 (char 55)
+2026-10-09T12:36:06.087897+00:00,inventory_paper,synthetic_inventory,llm,qwen2.5:1.5b,1,naive_retry,transient_rate_limit,not_applicable,2,0,0,0,0,1,1,3,2,1,3.76424,615,1,tool must be a string and args an object
+2026-10-09T12:37:23.901045+00:00,inventory_paper,synthetic_inventory,llm,qwen2.5:1.5b,1,closed_loop,transient_rate_limit,schema_diff,2,0,2,1,1,7,4,7,4,1,77.674752,6951,1,Extra data: line 2 column 1 (char 55)
+2026-10-09T12:37:27.838465+00:00,inventory_paper,synthetic_inventory,llm,qwen2.5:1.5b,1,no_verification,wrong_tool,not_applicable,0,0,0,0,0,1,1,1,0,1,3.81254,610,1,Extra data: line 2 column 1 (char 55)
+2026-10-09T12:37:31.495816+00:00,inventory_paper,synthetic_inventory,llm,qwen2.5:1.5b,1,naive_retry,wrong_tool,not_applicable,2,0,0,0,0,1,1,3,2,1,3.524155,615,1,tool must be a string and args an object
+2026-10-09T12:38:24.447078+00:00,inventory_paper,synthetic_inventory,llm,qwen2.5:1.5b,1,closed_loop,wrong_tool,schema_diff,2,1,3,1,1,6,2,6,3,0,52.822911,5517,1,
+2026-10-09T12:38:33.982486+00:00,inventory_battery,synthetic_inventory,llm,qwen2.5:1.5b,1,no_verification,none,not_applicable,0,0,0,0,0,1,1,1,0,1,9.22201,613,1,tool must be a string and args an object
+2026-10-09T12:38:37.320320+00:00,inventory_battery,synthetic_inventory,llm,qwen2.5:1.5b,1,naive_retry,none,not_applicable,2,0,0,0,0,1,1,3,2,1,3.102296,608,1,Extra data: line 2 column 1 (char 57)
+2026-10-09T12:39:46.813581+00:00,inventory_battery,synthetic_inventory,llm,qwen2.5:1.5b,1,closed_loop,none,schema_diff,2,0,2,0,0,6,4,6,3,1,69.372843,5716,1,Extra data: line 2 column 1 (char 57)
+2026-10-09T12:39:51.041477+00:00,inventory_battery,synthetic_inventory,llm,qwen2.5:1.5b,1,no_verification,malformed_json,not_applicable,0,0,0,0,0,1,1,1,0,1,4.091762,613,1,tool must be a string and args an object
+2026-10-09T12:39:54.629483+00:00,inventory_battery,synthetic_inventory,llm,qwen2.5:1.5b,1,naive_retry,malformed_json,not_applicable,2,0,0,0,0,1,1,3,2,1,3.459667,613,1,tool must be a string and args an object
+2026-10-09T12:41:20.966654+00:00,inventory_battery,synthetic_inventory,llm,qwen2.5:1.5b,1,closed_loop,malformed_json,schema_diff,2,1,3,1,1,8,4,8,5,0,86.2087,8379,1,
+2026-10-09T12:41:25.289420+00:00,inventory_battery,synthetic_inventory,llm,qwen2.5:1.5b,1,no_verification,type_mismatch,not_applicable,0,0,0,0,0,1,1,1,0,1,4.185601,613,1,tool must be a string and args an object
+2026-10-09T12:41:28.921125+00:00,inventory_battery,synthetic_inventory,llm,qwen2.5:1.5b,1,naive_retry,type_mismatch,not_applicable,2,0,0,0,0,1,1,3,2,1,3.499421,613,1,tool must be a string and args an object
+2026-10-09T12:42:28.178341+00:00,inventory_battery,synthetic_inventory,llm,qwen2.5:1.5b,1,closed_loop,type_mismatch,schema_diff,2,1,3,1,1,6,2,6,3,0,59.123978,5726,1,
+2026-10-09T12:42:32.393260+00:00,inventory_battery,synthetic_inventory,llm,qwen2.5:1.5b,1,no_verification,stale_schema,not_applicable,0,0,0,0,0,1,1,1,0,1,4.083461,613,1,tool must be a string and args an object
+2026-10-09T12:42:35.975302+00:00,inventory_battery,synthetic_inventory,llm,qwen2.5:1.5b,1,naive_retry,stale_schema,not_applicable,2,0,0,0,0,1,1,3,2,1,3.451658,613,1,tool must be a string and args an object
+2026-10-09T12:43:18.242640+00:00,inventory_battery,synthetic_inventory,llm,qwen2.5:1.5b,1,closed_loop,stale_schema,schema_diff,2,1,3,1,1,5,1,5,2,0,42.134665,4586,1,
+2026-10-09T12:43:22.471365+00:00,inventory_battery,synthetic_inventory,llm,qwen2.5:1.5b,1,no_verification,transient_api,not_applicable,0,0,0,0,0,1,1,1,0,1,4.096808,613,1,tool must be a string and args an object
+2026-10-09T12:43:26.053192+00:00,inventory_battery,synthetic_inventory,llm,qwen2.5:1.5b,1,naive_retry,transient_api,not_applicable,2,0,0,0,0,1,1,3,2,1,3.449928,613,1,tool must be a string and args an object
+2026-10-09T12:44:06.547884+00:00,inventory_battery,synthetic_inventory,llm,qwen2.5:1.5b,1,closed_loop,transient_api,schema_diff,2,1,3,1,1,5,1,5,2,0,40.370848,4517,1,
+2026-10-09T12:44:10.798276+00:00,inventory_battery,synthetic_inventory,llm,qwen2.5:1.5b,1,no_verification,transient_timeout,not_applicable,0,0,0,0,0,1,1,1,0,1,4.110523,613,1,tool must be a string and args an object
+2026-10-09T12:44:14.393637+00:00,inventory_battery,synthetic_inventory,llm,qwen2.5:1.5b,1,naive_retry,transient_timeout,not_applicable,2,0,0,0,0,1,1,3,2,1,3.464054,613,1,tool must be a string and args an object
+2026-10-09T12:44:54.835654+00:00,inventory_battery,synthetic_inventory,llm,qwen2.5:1.5b,1,closed_loop,transient_timeout,schema_diff,2,1,3,1,1,5,1,5,2,0,40.30929,4534,1,
+2026-10-09T12:44:59.320693+00:00,inventory_battery,synthetic_inventory,llm,qwen2.5:1.5b,1,no_verification,transient_rate_limit,not_applicable,0,0,0,0,0,1,1,1,0,1,4.35315,613,1,tool must be a string and args an object
+2026-10-09T12:45:03.707808+00:00,inventory_battery,synthetic_inventory,llm,qwen2.5:1.5b,1,naive_retry,transient_rate_limit,not_applicable,2,0,0,0,0,1,1,3,2,1,4.236046,613,1,tool must be a string and args an object
+2026-10-09T12:45:43.990925+00:00,inventory_battery,synthetic_inventory,llm,qwen2.5:1.5b,1,closed_loop,transient_rate_limit,schema_diff,2,1,3,1,1,5,1,5,2,0,40.147117,4512,1,
+2026-10-09T12:45:48.482440+00:00,inventory_battery,synthetic_inventory,llm,qwen2.5:1.5b,1,no_verification,wrong_tool,not_applicable,0,0,0,0,0,1,1,1,0,1,4.362789,613,1,tool must be a string and args an object
+2026-10-09T12:45:52.338348+00:00,inventory_battery,synthetic_inventory,llm,qwen2.5:1.5b,1,naive_retry,wrong_tool,not_applicable,2,0,0,0,0,1,1,3,2,1,3.712162,613,1,tool must be a string and args an object
+2026-10-09T12:46:33.202692+00:00,inventory_battery,synthetic_inventory,llm,qwen2.5:1.5b,1,closed_loop,wrong_tool,schema_diff,2,1,3,1,1,5,1,5,2,0,40.726347,4523,1,
+2026-10-09T12:46:58.039272+00:00,inventory_adapter,synthetic_inventory,llm,qwen2.5:1.5b,1,no_verification,none,not_applicable,0,1,3,0,0,3,0,3,0,0,24.701788,1922,1,
+2026-10-09T12:47:22.363944+00:00,inventory_adapter,synthetic_inventory,llm,qwen2.5:1.5b,1,naive_retry,none,not_applicable,2,1,3,0,0,3,0,3,0,0,24.189513,1922,1,
+2026-10-09T12:47:46.639999+00:00,inventory_adapter,synthetic_inventory,llm,qwen2.5:1.5b,1,closed_loop,none,schema_diff,2,1,3,0,0,3,0,3,0,0,24.145118,1922,1,
+2026-10-09T12:48:01.708152+00:00,inventory_adapter,synthetic_inventory,llm,qwen2.5:1.5b,1,no_verification,malformed_json,not_applicable,0,0,1,1,0,2,0,2,0,1,14.929943,1224,1,Expecting value: line 1 column 34 (char 33)
+2026-10-09T12:48:16.926678+00:00,inventory_adapter,synthetic_inventory,llm,qwen2.5:1.5b,1,naive_retry,malformed_json,not_applicable,2,0,1,1,0,2,0,4,2,1,15.085485,1224,1,Expecting value: line 1 column 34 (char 33)
+2026-10-09T12:49:03.144103+00:00,inventory_adapter,synthetic_inventory,llm,qwen2.5:1.5b,1,closed_loop,malformed_json,schema_diff,2,1,3,1,1,6,2,6,3,0,46.08063,4913,1,
+2026-10-09T12:49:18.139979+00:00,inventory_adapter,synthetic_inventory,llm,qwen2.5:1.5b,1,no_verification,type_mismatch,not_applicable,0,0,1,1,0,2,0,2,0,1,14.859287,1224,1,"Error executing tool reserve_stock: 1 validation error for reserve_stockArguments
+quantity
+  Input should be a valid integer, unable to parse string as an integer [type=int_parsing, input_value='NOT_A_NUMBER', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.14/v/int_parsing"
+2026-10-09T12:49:33.041184+00:00,inventory_adapter,synthetic_inventory,llm,qwen2.5:1.5b,1,naive_retry,type_mismatch,not_applicable,2,0,1,1,0,2,0,4,2,1,14.764333,1224,1,"Error executing tool reserve_stock: 1 validation error for reserve_stockArguments
+quantity
+  Input should be a valid integer, unable to parse string as an integer [type=int_parsing, input_value='NOT_A_NUMBER', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.14/v/int_parsing"
+2026-10-09T12:50:02.093251+00:00,inventory_adapter,synthetic_inventory,llm,qwen2.5:1.5b,1,closed_loop,type_mismatch,schema_diff,2,1,3,1,1,4,0,4,1,0,28.912454,2865,1,
+2026-10-09T12:50:17.156889+00:00,inventory_adapter,synthetic_inventory,llm,qwen2.5:1.5b,1,no_verification,stale_schema,not_applicable,0,0,1,1,0,2,0,2,0,1,14.924575,1224,1,"Error executing tool reserve_stock: 1 validation error for reserve_stockArguments
+quantity
+  Field required [type=missing, input_value={'sku': 'ADAPTER', 'quantity_old': 2}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.14/v/missing"
+2026-10-09T12:50:32.067176+00:00,inventory_adapter,synthetic_inventory,llm,qwen2.5:1.5b,1,naive_retry,stale_schema,not_applicable,2,0,1,1,0,2,0,4,2,1,14.773656,1224,1,"Error executing tool reserve_stock: 1 validation error for reserve_stockArguments
+quantity
+  Field required [type=missing, input_value={'sku': 'ADAPTER', 'quantity_old': 2}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.14/v/missing"
+2026-10-09T12:50:59.753685+00:00,inventory_adapter,synthetic_inventory,llm,qwen2.5:1.5b,1,closed_loop,stale_schema,schema_diff,2,1,3,1,1,4,0,4,1,0,26.786757,2849,1,
+2026-10-09T12:51:14.908465+00:00,inventory_adapter,synthetic_inventory,llm,qwen2.5:1.5b,1,no_verification,transient_api,not_applicable,0,0,1,1,0,2,0,2,0,1,15.004195,1224,1,Injected temporary upstream HTTP 503 failure
+2026-10-09T12:51:39.231039+00:00,inventory_adapter,synthetic_inventory,llm,qwen2.5:1.5b,1,naive_retry,transient_api,not_applicable,2,1,3,1,1,3,0,4,1,0,24.182897,1922,1,
+2026-10-09T12:52:05.021607+00:00,inventory_adapter,synthetic_inventory,llm,qwen2.5:1.5b,1,closed_loop,transient_api,schema_diff,2,1,3,1,1,4,0,4,1,0,25.646107,2796,1,
+2026-10-09T12:52:20.970528+00:00,inventory_adapter,synthetic_inventory,llm,qwen2.5:1.5b,1,no_verification,transient_timeout,not_applicable,0,0,1,1,0,2,0,2,0,1,15.814469,1224,1,Injected upstream network timeout
+2026-10-09T12:52:45.226512+00:00,inventory_adapter,synthetic_inventory,llm,qwen2.5:1.5b,1,naive_retry,transient_timeout,not_applicable,2,1,3,1,1,3,0,4,1,0,24.089852,1922,1,
+2026-10-09T12:53:10.721892+00:00,inventory_adapter,synthetic_inventory,llm,qwen2.5:1.5b,1,closed_loop,transient_timeout,schema_diff,2,1,3,1,1,4,0,4,1,0,25.356481,2772,1,
+2026-10-09T12:53:25.765427+00:00,inventory_adapter,synthetic_inventory,llm,qwen2.5:1.5b,1,no_verification,transient_rate_limit,not_applicable,0,0,1,1,0,2,0,2,0,1,14.904436,1224,1,Injected upstream API rate limit
+2026-10-09T12:53:49.934029+00:00,inventory_adapter,synthetic_inventory,llm,qwen2.5:1.5b,1,naive_retry,transient_rate_limit,not_applicable,2,1,3,1,1,3,0,4,1,0,24.029873,1922,1,
+2026-10-09T12:54:15.169469+00:00,inventory_adapter,synthetic_inventory,llm,qwen2.5:1.5b,1,closed_loop,transient_rate_limit,schema_diff,2,1,3,1,1,4,0,4,1,0,25.097268,2784,1,
+2026-10-09T12:54:30.290909+00:00,inventory_adapter,synthetic_inventory,llm,qwen2.5:1.5b,1,no_verification,wrong_tool,not_applicable,0,0,1,1,0,2,0,2,0,1,14.981762,1224,1,Unsafe to retry state-changing operation without compensating rollback; escalation required
+2026-10-09T12:54:45.221779+00:00,inventory_adapter,synthetic_inventory,llm,qwen2.5:1.5b,1,naive_retry,wrong_tool,not_applicable,2,0,1,1,0,2,0,2,0,1,14.791969,1224,1,Unsafe to retry state-changing operation without compensating rollback; escalation required
+2026-10-09T12:55:18.823994+00:00,inventory_adapter,synthetic_inventory,llm,qwen2.5:1.5b,1,closed_loop,wrong_tool,schema_diff,2,1,3,1,1,5,1,5,2,0,33.469456,3769,1,
+2026-10-09T12:55:27.853197+00:00,inventory_mic,synthetic_inventory,llm,qwen2.5:1.5b,1,no_verification,none,not_applicable,0,0,0,0,0,1,1,1,0,1,8.881983,607,1,tool must be a string and args an object
+2026-10-09T12:55:31.150896+00:00,inventory_mic,synthetic_inventory,llm,qwen2.5:1.5b,1,naive_retry,none,not_applicable,2,0,0,0,0,1,1,3,2,1,3.158612,607,1,tool must be a string and args an object
+2026-10-09T12:56:14.718287+00:00,inventory_mic,synthetic_inventory,llm,qwen2.5:1.5b,1,closed_loop,none,schema_diff,2,1,3,0,0,4,1,4,1,0,43.435254,3352,1,
+2026-10-09T12:56:25.704952+00:00,inventory_mic,synthetic_inventory,llm,qwen2.5:1.5b,1,no_verification,malformed_json,not_applicable,0,0,1,1,0,2,0,2,0,1,10.827327,1215,1,Expecting value: line 1 column 34 (char 33)
+2026-10-09T12:56:41.673566+00:00,inventory_mic,synthetic_inventory,llm,qwen2.5:1.5b,1,naive_retry,malformed_json,not_applicable,2,0,1,1,0,2,0,4,2,1,15.825509,1215,1,Expecting value: line 1 column 34 (char 33)
+2026-10-09T12:57:28.359285+00:00,inventory_mic,synthetic_inventory,llm,qwen2.5:1.5b,1,closed_loop,malformed_json,schema_diff,2,0,2,1,1,6,3,6,3,1,46.524023,4873,1,"Selected reserve_stock, but the current task requires check_stock"
+2026-10-09T12:57:36.862357+00:00,inventory_mic,synthetic_inventory,llm,qwen2.5:1.5b,1,no_verification,type_mismatch,not_applicable,0,0,0,0,0,1,1,1,0,1,8.359217,607,1,tool must be a string and args an object
+2026-10-09T12:57:40.178515+00:00,inventory_mic,synthetic_inventory,llm,qwen2.5:1.5b,1,naive_retry,type_mismatch,not_applicable,2,0,0,0,0,1,1,3,2,1,3.174917,607,1,tool must be a string and args an object
+2026-10-09T12:58:21.763381+00:00,inventory_mic,synthetic_inventory,llm,qwen2.5:1.5b,1,closed_loop,type_mismatch,schema_diff,2,1,3,1,1,5,1,5,2,0,41.446035,4537,1,
+2026-10-09T12:58:32.124104+00:00,inventory_mic,synthetic_inventory,llm,qwen2.5:1.5b,1,no_verification,stale_schema,not_applicable,0,0,1,1,0,2,0,2,0,1,10.214318,1215,1,"Error executing tool reserve_stock: 1 validation error for reserve_stockArguments
+quantity
+  Field required [type=missing, input_value={'sku': 'MIC', 'quantity_old': 1}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.14/v/missing"
+2026-10-09T12:58:46.831230+00:00,inventory_mic,synthetic_inventory,llm,qwen2.5:1.5b,1,naive_retry,stale_schema,not_applicable,2,0,1,1,0,2,0,4,2,1,14.566822,1215,1,"Error executing tool reserve_stock: 1 validation error for reserve_stockArguments
+quantity
+  Field required [type=missing, input_value={'sku': 'MIC', 'quantity_old': 1}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.14/v/missing"
+2026-10-09T12:59:14.558141+00:00,inventory_mic,synthetic_inventory,llm,qwen2.5:1.5b,1,closed_loop,stale_schema,schema_diff,2,1,3,1,1,4,0,4,1,0,27.585794,2820,1,
+2026-10-09T12:59:23.046541+00:00,inventory_mic,synthetic_inventory,llm,qwen2.5:1.5b,1,no_verification,transient_api,not_applicable,0,0,0,0,0,1,1,1,0,1,8.347663,607,1,tool must be a string and args an object
+2026-10-09T12:59:26.352265+00:00,inventory_mic,synthetic_inventory,llm,qwen2.5:1.5b,1,naive_retry,transient_api,not_applicable,2,0,0,0,0,1,1,3,2,1,3.165521,607,1,tool must be a string and args an object
+2026-10-09T13:00:05.990324+00:00,inventory_mic,synthetic_inventory,llm,qwen2.5:1.5b,1,closed_loop,transient_api,schema_diff,2,1,3,1,1,5,1,5,2,0,39.497468,4467,1,
+2026-10-09T13:00:16.172574+00:00,inventory_mic,synthetic_inventory,llm,qwen2.5:1.5b,1,no_verification,transient_timeout,not_applicable,0,0,1,1,0,2,0,2,0,1,10.040621,1215,1,Injected upstream network timeout
+2026-10-09T13:00:39.823028+00:00,inventory_mic,synthetic_inventory,llm,qwen2.5:1.5b,1,naive_retry,transient_timeout,not_applicable,2,1,3,1,1,3,0,4,1,0,23.507454,1904,1,
+2026-10-09T13:01:24.653042+00:00,inventory_mic,synthetic_inventory,llm,qwen2.5:1.5b,1,closed_loop,transient_timeout,schema_diff,2,1,3,1,1,5,1,5,2,0,44.693115,4452,1,
+2026-10-09T13:01:35.197984+00:00,inventory_mic,synthetic_inventory,llm,qwen2.5:1.5b,1,no_verification,transient_rate_limit,not_applicable,0,0,1,1,0,2,0,2,0,1,10.392872,1215,1,Injected upstream API rate limit
+2026-10-09T13:01:58.992341+00:00,inventory_mic,synthetic_inventory,llm,qwen2.5:1.5b,1,naive_retry,transient_rate_limit,not_applicable,2,1,3,1,1,3,0,4,1,0,23.6534,1904,1,
+2026-10-09T13:02:44.970676+00:00,inventory_mic,synthetic_inventory,llm,qwen2.5:1.5b,1,closed_loop,transient_rate_limit,schema_diff,2,1,3,1,1,5,1,5,2,0,45.828647,4492,1,
+2026-10-09T13:02:55.105166+00:00,inventory_mic,synthetic_inventory,llm,qwen2.5:1.5b,1,no_verification,wrong_tool,not_applicable,0,0,1,1,0,2,0,2,0,1,9.992748,1215,1,Unsafe to retry state-changing operation without compensating rollback; escalation required
+2026-10-09T13:03:09.823461+00:00,inventory_mic,synthetic_inventory,llm,qwen2.5:1.5b,1,naive_retry,wrong_tool,not_applicable,2,0,1,1,0,2,0,2,0,1,14.576102,1215,1,Unsafe to retry state-changing operation without compensating rollback; escalation required
+2026-10-09T13:03:57.368851+00:00,inventory_mic,synthetic_inventory,llm,qwen2.5:1.5b,1,closed_loop,wrong_tool,schema_diff,2,0,2,1,1,6,3,6,3,1,46.993537,4747,1,"Selected reserve_stock, but the current task requires check_stock"
+2026-10-09T13:04:23.393566+00:00,inventory_speaker,synthetic_inventory,llm,qwen2.5:1.5b,1,no_verification,none,not_applicable,0,1,3,0,0,3,0,3,0,0,25.881825,1934,1,
+2026-10-09T13:04:40.330145+00:00,inventory_speaker,synthetic_inventory,llm,qwen2.5:1.5b,1,naive_retry,none,not_applicable,2,1,3,0,0,3,0,3,0,0,16.785846,1934,1,
+2026-10-09T13:04:57.309098+00:00,inventory_speaker,synthetic_inventory,llm,qwen2.5:1.5b,1,closed_loop,none,schema_diff,2,1,3,0,0,3,0,3,0,0,16.83563,1934,1,
+2026-10-09T13:05:14.418628+00:00,inventory_speaker,synthetic_inventory,llm,qwen2.5:1.5b,1,no_verification,malformed_json,not_applicable,0,0,1,1,0,2,0,2,0,1,16.968613,1231,1,Expecting value: line 1 column 34 (char 33)
+2026-10-09T13:05:30.693155+00:00,inventory_speaker,synthetic_inventory,llm,qwen2.5:1.5b,1,naive_retry,malformed_json,not_applicable,2,0,1,1,0,2,0,4,2,1,16.133411,1231,1,Expecting value: line 1 column 34 (char 33)
+2026-10-09T13:06:33.229121+00:00,inventory_speaker,synthetic_inventory,llm,qwen2.5:1.5b,1,closed_loop,malformed_json,schema_diff,2,0,2,1,1,6,3,6,3,1,62.372623,5219,1,"Selected reserve_stock, but the current task requires check_stock"
+2026-10-09T13:06:50.360139+00:00,inventory_speaker,synthetic_inventory,llm,qwen2.5:1.5b,1,no_verification,type_mismatch,not_applicable,0,0,1,1,0,2,0,2,0,1,16.991758,1231,1,"Error executing tool reserve_stock: 1 validation error for reserve_stockArguments
+quantity
+  Input should be a valid integer, unable to parse string as an integer [type=int_parsing, input_value='NOT_A_NUMBER', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.14/v/int_parsing"
+2026-10-09T13:07:08.120214+00:00,inventory_speaker,synthetic_inventory,llm,qwen2.5:1.5b,1,naive_retry,type_mismatch,not_applicable,2,0,1,1,0,2,0,4,2,1,17.612603,1231,1,"Error executing tool reserve_stock: 1 validation error for reserve_stockArguments
+quantity
+  Input should be a valid integer, unable to parse string as an integer [type=int_parsing, input_value='NOT_A_NUMBER', input_type=str]
+    For further information visit https://errors.pydantic.dev/2.14/v/int_parsing"
+2026-10-09T13:07:38.737814+00:00,inventory_speaker,synthetic_inventory,llm,qwen2.5:1.5b,1,closed_loop,type_mismatch,schema_diff,2,1,3,1,1,4,0,4,1,0,30.459167,2885,1,
+2026-10-09T13:07:55.286497+00:00,inventory_speaker,synthetic_inventory,llm,qwen2.5:1.5b,1,no_verification,stale_schema,not_applicable,0,0,1,1,0,2,0,2,0,1,16.402928,1231,1,"Error executing tool reserve_stock: 1 validation error for reserve_stockArguments
+quantity
+  Field required [type=missing, input_value={'sku': 'SPEAKER', 'quantity_old': 3}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.14/v/missing"
+2026-10-09T13:08:12.320182+00:00,inventory_speaker,synthetic_inventory,llm,qwen2.5:1.5b,1,naive_retry,stale_schema,not_applicable,2,0,1,1,0,2,0,4,2,1,16.889777,1231,1,"Error executing tool reserve_stock: 1 validation error for reserve_stockArguments
+quantity
+  Field required [type=missing, input_value={'sku': 'SPEAKER', 'quantity_old': 3}, input_type=dict]
+    For further information visit https://errors.pydantic.dev/2.14/v/missing"
+2026-10-09T13:08:43.130312+00:00,inventory_speaker,synthetic_inventory,llm,qwen2.5:1.5b,1,closed_loop,stale_schema,schema_diff,2,1,3,1,1,4,0,4,1,0,30.660401,2869,1,
+2026-10-09T13:08:59.993127+00:00,inventory_speaker,synthetic_inventory,llm,qwen2.5:1.5b,1,no_verification,transient_api,not_applicable,0,0,1,1,0,2,0,2,0,1,16.701843,1231,1,Injected temporary upstream HTTP 503 failure
+2026-10-09T13:09:21.195579+00:00,inventory_speaker,synthetic_inventory,llm,qwen2.5:1.5b,1,naive_retry,transient_api,not_applicable,2,1,3,1,1,3,0,4,1,0,21.04439,1934,1,
+2026-10-09T13:09:50.657424+00:00,inventory_speaker,synthetic_inventory,llm,qwen2.5:1.5b,1,closed_loop,transient_api,schema_diff,2,1,3,1,1,4,0,4,1,0,29.307357,2813,1,
+2026-10-09T13:10:07.937740+00:00,inventory_speaker,synthetic_inventory,llm,qwen2.5:1.5b,1,no_verification,transient_timeout,not_applicable,0,0,1,1,0,2,0,2,0,1,17.121214,1231,1,Injected upstream network timeout
+2026-10-09T13:10:28.617373+00:00,inventory_speaker,synthetic_inventory,llm,qwen2.5:1.5b,1,naive_retry,transient_timeout,not_applicable,2,1,3,1,1,3,0,4,1,0,20.503477,1934,1,
+2026-10-09T13:10:57.667614+00:00,inventory_speaker,synthetic_inventory,llm,qwen2.5:1.5b,1,closed_loop,transient_timeout,schema_diff,2,1,3,1,1,4,0,4,1,0,28.891565,2789,1,
+2026-10-09T13:11:14.935389+00:00,inventory_speaker,synthetic_inventory,llm,qwen2.5:1.5b,1,no_verification,transient_rate_limit,not_applicable,0,0,1,1,0,2,0,2,0,1,17.117077,1231,1,Injected upstream API rate limit
+2026-10-09T13:11:36.570885+00:00,inventory_speaker,synthetic_inventory,llm,qwen2.5:1.5b,1,naive_retry,transient_rate_limit,not_applicable,2,1,3,1,1,3,0,4,1,0,21.488271,1934,1,
+2026-10-09T13:12:06.683388+00:00,inventory_speaker,synthetic_inventory,llm,qwen2.5:1.5b,1,closed_loop,transient_rate_limit,schema_diff,2,1,3,1,1,4,0,4,1,0,29.915046,2803,1,
+2026-10-09T13:12:23.878198+00:00,inventory_speaker,synthetic_inventory,llm,qwen2.5:1.5b,1,no_verification,wrong_tool,not_applicable,0,0,1,1,0,2,0,2,0,1,17.037978,1231,1,Unsafe to retry state-changing operation without compensating rollback; escalation required
+2026-10-09T13:12:40.601391+00:00,inventory_speaker,synthetic_inventory,llm,qwen2.5:1.5b,1,naive_retry,wrong_tool,not_applicable,2,0,1,1,0,2,0,2,0,1,16.574084,1231,1,Unsafe to retry state-changing operation without compensating rollback; escalation required
+2026-10-09T13:13:17.230874+00:00,inventory_speaker,synthetic_inventory,llm,qwen2.5:1.5b,1,closed_loop,wrong_tool,schema_diff,2,1,3,1,1,5,1,5,2,0,36.475516,3793,1,

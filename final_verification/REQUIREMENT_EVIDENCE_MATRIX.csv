@@ -1,0 +1,21 @@
+﻿requirement,status,evidence
+MCP client and server,PASS,experiment.py; server.py; prior successful HTTP stock check
+Generate Verify Eval Feedback,PASS,experiment.py; verification.py; feedback.py
+Schema and safety preflight,PASS,verification.py; mutating-tool guard
+Five failure families and controlled injection,PASS,taxonomy.py; 8 scenarios incl control
+Self-correction; retry budgets; circuit breaker,PASS,experiment.py and saved attempt_events.jsonl
+Three baseline conditions,PASS,480 inventory trials across identical scheduled task/fault cells
+Real local model usage and tokens,PASS,849 LLM trials and complete token counts
+Adapt existing benchmark,PASS,BFCL 20-case single-call subset; no official leaderboard claims
+End-to-end multi-tool benchmark,PASS,20 inventory multi-step tasks
+Five requested metrics,PASS,trial logs and final tables
+Compare feedback formats,PASS,72 rows; 24 per feedback variant
+Compare retry budgets 0-4,PASS,16 unique trials per budget in each retry-capable condition
+Identical scheduled fault rates,PASS,20 tasks x 7 injected scenarios per condition
+Identical actually-realised fault exposure,QUALIFIED,"139,57,50 realised across all scheduled rows; 50 exact-matched cells per condition in subset"
+Observed local MCP failure frequencies,PASS_WITH_SCOPE,Qwen proposals for controlled local tasks; not general-world prevalence
+Find token/reliability break-even,PASS_WITH_SCOPE,Evaluate the tested budgets; report no universal cutoff demonstrated
+Figures and CSV analysis,PASS,Existing 5 PNG figures and analysis in each of 4 main runs
+Reproducibility and source hashes,PASS,25 source hashes match prior audit
+Local MCP HTTP transport,PASS_FROM_USER_LOG,HTTP STOCK VALUE: PASS previously observed on user Windows
+Publish open implementation,USER_ACTION,Ready-to-publish source archive is supplied separately; user must upload it to a public repository

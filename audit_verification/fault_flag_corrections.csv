@@ -1,0 +1,2 @@
+task_id,condition,fault,old_injected_fault,old_recovered,new_injected_fault,new_recovered,reason
+inventory_cable,closed_loop,transient_api,1,1,0,0,No transport_injection event in saved log

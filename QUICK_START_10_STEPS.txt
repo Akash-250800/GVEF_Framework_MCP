@@ -1,0 +1,18 @@
+MCP THESIS: WINDOWS / E DRIVE / FREE OLLAMA MODEL
+
+IMPORTANT: All project files are DIRECTLY in E:\MCP-Thesis.
+DO NOT MOVE/DELETE your .venv folder. Do NOT paste source files inside .venv.
+
+1. Open Anaconda Prompt.
+2. Type: cd /d E:\MCP-Thesis
+3. Type: .venv\Scripts\activate
+4. Type: python -m pip install -r requirements.txt
+5. Type: python -m pytest -q    [STOP if tests fail]
+6. Install free Ollama for Windows: https://ollama.com/download/windows
+7. Open Ollama app. In Anaconda Prompt type: ollama pull qwen2.5:1.5b
+8. Type: python check_ollama.py    [STOP if connection fails]
+9. Type: python experiment.py --mode ollama --tasks 1 --suite baselines --faults type_mismatch --out results_ollama_pilot
+10. When the pilot works, read README.md for full experimental suite, BFCL, figures, and optional HTTP test.
+
+NO OPENAI API KEY IS NEEDED. No paid software, training, or cloud hosting.
+Your Ollama model can take time to respond on an 8 GB laptop.

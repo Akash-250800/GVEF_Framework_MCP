@@ -1,0 +1,32 @@
+{
+  "target_folder": "E:\\MCP-Thesis",
+  "local_model": "qwen2.5:1.5b",
+  "model_connection": "http://127.0.0.1:11434/api/chat",
+  "files": {
+    ".gitignore": "792bfc67369458ad7d580851d91a9f349cfb3396047d85a0a0f0f3be06a93456",
+    "QUICK_START_10_STEPS.txt": "5017b5ef97130833ed0a18425e96f0fefb3dd5c476c9f1de1d3572d2e23dbe99",
+    "README.md": "b8314038d261d0bcbdcdbf952d07bbfa4cc726b7db50b578364a120a974dbb50",
+    "START_WINDOWS.bat": "9f168b0b6c802d3cd3dcfba1f37240d5562ecd29bdc8cf47bb6705b1be3a5d37",
+    "agents.py": "b55ea69400f69d44e36a9ebcf91b5dec13bb3e9e8189a283655046a2bcd160dd",
+    "analyse.py": "3f320ae89902c807b218b5ce40237c558af97fd3153b808e9242b7c32d36e91d",
+    "benchmarks.py": "c52e3a5aff22939b3cebcde934d08c21871c296d5dd6a380ab8ca9c808e1da79",
+    "check_ollama.py": "28d33d0cce34cecc862be0ac54ef31c900b1f37bfd3bdd8e620d1ea435c19d93",
+    "download_bfcl.py": "6a36432d6dcbb5b65509618e9459b9c3e6613faffefd897d12658ceb954678aa",
+    "experiment.py": "381cb03297189a47377480b6885e6193edd8cd2778ed2b274a74fc0f63ba0388",
+    "feedback.py": "086637305b32585d9eb0db8165a74215547037953e6b4128b3ea474b5123e9bb",
+    "http_smoke_test.py": "e674b2e8ce9436b8999aa658114336fab1539784fbd35fd0fe0c4f428e825862",
+    "inventory_data.py": "a42313b496c5aa74fe42c40c108b271119b9b32f50c9ad26c13bc5827ba160e0",
+    "make_figures.py": "bce0b88ca9240a184b341f0399d14dbd4137449195f723e9c0f96a52372dfdca",
+    "pytest.ini": "e0e76b5c1594195370b29d46d4415e9f04d239fd3e34c9aed198298008736055",
+    "requirements.txt": "f804e5ba48f51a39e6baa747a2a2c76a53a97f25834e8d25f4d1eeb3f79c742b",
+    "serve_http.py": "026b2b78d73d00845e0cd1060a6f72ed0891b892030c6725372923f145ebc843",
+    "server.py": "723c15a4f7fd75b9eb4e93ac2fdeaaa357cc92087a8633dfc6652aa9a4e298fa",
+    "taxonomy.py": "bb7c40b1eddfa78056b6044867629101ba95e4607ee2ceefff7879bbd48943d1",
+    "tests/test_mcp_integration.py": "1c3e258dcb40a46b784da9108cfe7d4fa7bf14569edc8cf870903d24783d9823",
+    "tests/test_mock_runner.py": "398f12943879aaf37d409f7b560ef443150a67380511d10129e410a92eb9adcb",
+    "tests/test_ollama_agent.py": "5ee237ec43487ca33bdc1cc26614840bfc08ac2f0ad98327f1824b604a8486e2",
+    "tests/test_policies.py": "4d9401315e760c6a6723947a21f205036465c413c8bf83fdcb8e153b913fe75e",
+    "tests/test_pure_modules.py": "cf94cd634246cc1bc1ffbc537158f5ae7bcb9615065ae8b6e7351efab44780f1",
+    "verification.py": "0fe8ae9eed9bc085448ec1a695829307adfac651e9b7c717386b3ca74b88df35"
+  }
+}

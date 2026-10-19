@@ -1,0 +1,4 @@
+﻿condition,tasks,completed,completion_rate
+no_verification,20,9,0.45
+naive_retry,20,8,0.4
+closed_loop,20,8,0.4
